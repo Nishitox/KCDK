@@ -26,6 +26,7 @@ scoreboard players set time_t kcdk.control 0
 scoreboard players set timer_m kcdk.control 0
 scoreboard players set timer_s kcdk.control 0
 scoreboard players set timer_t kcdk.control 0
+scoreboard players set version kcdk.control 0
 scoreboard players set victory kcdk.control 0
 
 scoreboard players set everyone kcdk.players 0
