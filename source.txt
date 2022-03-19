@@ -35,23 +35,17 @@ scoreboard players set victory control 0
 ---------------------------------------------------------------------------------------------------
 /[announce start/end]
 setblock ~ ~-1 ~ minecraft:air
-title @a times 0 80 20
 scoreboard players test phase control 2 2
-^title @a title {"text":""}
-^title @a subtitle {"text":"試合開始"}
+^tellraw @a ["",{"text":"\n[kcdk.announce] ","color":"gray"},{"text":"試合開始\n"}]
 ^execute @a ~ ~ ~ playsound minecraft:block.anvil.place master @p ~ ~ ~ 10 1.7
 
 scoreboard players test phase control 3 3
 ^scoreboard players test victory control 1 1
 ^tellraw @a ["",{"text":"\n[kcdk.result] ","color":"gray"},{"text":"青チームの勝利\n"}]
-^title @a title {"text":"青チームの勝利","color":"blue"}
-^[blue subtitle] title @a subtitle {"text":""}
 
 scoreboard players test phase control 3 3
 ^scoreboard players test victory control 2 2
 ^tellraw @a ["",{"text":"\n[kcdk.result] ","color":"gray"},{"text":"赤チームの勝利\n"}]
-^title @a title {"text":"赤チームの勝利","color":"red"}
-^[red subtitle] title @a subtitle {"text":""}
 
 scoreboard players test phase control 3 3
 ^execute @a ~ ~ ~ playsound minecraft:block.anvil.use master @p ~ ~ ~ 10 0.9
@@ -197,47 +191,49 @@ scoreboard players test phase control 2 2
 scoreboard players test phase control 2 2
 ^testfor @a[team=red,m=!creative,m=!spectator]
 ---------------------------------------------------------------------------------------------------
-/[actionbar]
+/[subtitle]
+title @a times 0 80 20
+title @a title ["",{"text":""}]
 scoreboard players test time_m control 0 0
 ^scoreboard players test time_s control 0 0
 ^scoreboard players test time_t control 0 0
 ^scoreboard players test timer_m control 0 0
 ^scoreboard players test timer_s control 0 0
 ^scoreboard players test timer_t control 0 0
-^title @a actionbar ["",{"text":"("},{"score":{"name":"players","objective":"control"}},{"text":"人が参加中 青チーム:"},{"score":{"name":"team_blue","objective":"control"}},{"text":" 赤チーム:"},{"score":{"name":"team_red","objective":"control"}},{"text":")"}]
+^title @a subtitle ["",{"text":"blue:"},{"score":{"name":"team_blue","objective":"control"}},{"text":" red:"},{"score":{"name":"team_red","objective":"control"}},{"text":" / "},{"score":{"name":"players","objective":"control"}},{"text":"                              "}]
 
 scoreboard players test phase control 1 1
-^title @a actionbar ["",{"text":"("},{"score":{"name":"timer_s","objective":"control"}},{"text":"秒後にゲームを開始します)"}]
+^title @a subtitle ["",{"score":{"name":"timer_s","objective":"control"}},{"text":"秒後にゲームを開始します"}]
 
 scoreboard players test phase control 2 2
 ^scoreboard players test timer_m control 1 59
 ^scoreboard players test timer_s control 1 59
-^title @a actionbar ["",{"text":"("},{"score":{"name":"players","objective":"control"}},{"text":"人が参加中 青チーム:"},{"score":{"name":"team_blue","objective":"control"}},{"text":" 赤チーム:"},{"score":{"name":"team_red","objective":"control"}},{"text":" 残り"},{"score":{"name":"timer_m","objective":"control"}},{"text":"分"},{"score":{"name":"timer_s","objective":"control"}},{"text":"秒)"}]
+^title @a subtitle ["",{"text":"blue:"},{"score":{"name":"team_blue","objective":"control"}},{"text":" red:"},{"score":{"name":"team_red","objective":"control"}},{"text":"                    残り"},{"score":{"name":"timer_m","objective":"control"}},{"text":"分"},{"score":{"name":"timer_s","objective":"control"}},{"text":"秒"}]
 
 scoreboard players test phase control 2 2
 ^scoreboard players test timer_m control 1 59
 ^scoreboard players test timer_s control 0 0
-^title @a actionbar ["",{"text":"("},{"score":{"name":"players","objective":"control"}},{"text":"人が参加中 青チーム:"},{"score":{"name":"team_blue","objective":"control"}},{"text":" 赤チーム:"},{"score":{"name":"team_red","objective":"control"}},{"text":" 残り"},{"score":{"name":"timer_m","objective":"control"}},{"text":"分)"}]
+^title @a subtitle ["",{"text":"blue:"},{"score":{"name":"team_blue","objective":"control"}},{"text":" red:"},{"score":{"name":"team_red","objective":"control"}},{"text":"                         残り"},{"score":{"name":"timer_m","objective":"control"}},{"text":"分"}]
 
 scoreboard players test phase control 2 2
 ^scoreboard players test timer_m control 0 0
 ^scoreboard players test timer_s control 1 59
-^title @a actionbar ["",{"text":"("},{"score":{"name":"players","objective":"control"}},{"text":"人が参加中 青チーム:"},{"score":{"name":"team_blue","objective":"control"}},{"text":" 赤チーム:"},{"score":{"name":"team_red","objective":"control"}},{"text":" 残り"},{"score":{"name":"timer_s","objective":"control"}},{"text":"秒)"}]
+^title @a subtitle ["",{"text":"blue:"},{"score":{"name":"team_blue","objective":"control"}},{"text":" red:"},{"score":{"name":"team_red","objective":"control"}},{"text":"                         残り"},{"score":{"name":"timer_s","objective":"control"}},{"text":"秒"}]
 
 scoreboard players test phase control 2 2
 ^scoreboard players test time_m control 1 59
 ^scoreboard players test time_s control 1 59
-^title @a actionbar ["",{"text":"("},{"score":{"name":"players","objective":"control"}},{"text":"人が参加中 青チーム:"},{"score":{"name":"team_blue","objective":"control"}},{"text":" 赤チーム:"},{"score":{"name":"team_red","objective":"control"}},{"text":" 経過時間:"},{"score":{"name":"time_m","objective":"control"}},{"text":"分"},{"score":{"name":"time_s","objective":"control"}},{"text":"秒)"}]
+^title @a subtitle ["",{"text":"blue:"},{"score":{"name":"team_blue","objective":"control"}},{"text":" red:"},{"score":{"name":"team_red","objective":"control"}},{"text":"               経過時間:"},{"score":{"name":"time_m","objective":"control"}},{"text":"分"},{"score":{"name":"time_s","objective":"control"}},{"text":"秒"}]
 
 scoreboard players test phase control 2 2
 ^scoreboard players test time_m control 1 59
 ^scoreboard players test time_s control 0 0
-^title @a actionbar ["",{"text":"("},{"score":{"name":"players","objective":"control"}},{"text":"人が参加中 青チーム:"},{"score":{"name":"team_blue","objective":"control"}},{"text":" 赤チーム:"},{"score":{"name":"team_red","objective":"control"}},{"text":" 経過時間:"},{"score":{"name":"time_m","objective":"control"}},{"text":"分)"}]
+^title @a subtitle ["",{"text":"blue:"},{"score":{"name":"team_blue","objective":"control"}},{"text":" red:"},{"score":{"name":"team_red","objective":"control"}},{"text":"                    経過時間:"},{"score":{"name":"time_m","objective":"control"}},{"text":"分"}]
 
 scoreboard players test phase control 2 2
 ^scoreboard players test time_m control 0 0
 ^scoreboard players test time_s control 1 59
-^title @a actionbar ["",{"text":"("},{"score":{"name":"players","objective":"control"}},{"text":"人が参加中 青チーム:"},{"score":{"name":"team_blue","objective":"control"}},{"text":" 赤チーム:"},{"score":{"name":"team_red","objective":"control"}},{"text":" 経過時間:"},{"score":{"name":"time_s","objective":"control"}},{"text":"秒)"}]
+^title @a subtitle ["",{"text":"blue:"},{"score":{"name":"team_blue","objective":"control"}},{"text":" red:"},{"score":{"name":"team_red","objective":"control"}},{"text":"                    経過時間:"},{"score":{"name":"time_s","objective":"control"}},{"text":"秒"}]
 ---------------------------------------------------------------------------------------------------
 /[set players]
 setblock ~ ~-1 ~ minecraft:air
@@ -292,8 +288,8 @@ scoreboard players test phase control 2 2
 /[set items]
 setblock ~ ~-1 ~ minecraft:air
 clear @a[score_role_min=0]
-replaceitem entity @a[team=blue] slot.armor.chest minecraft:leather_chestplate 1 0 {Unbreakable:true,ench:[{id:10s,lvl:1s}],display:{color:1188322},HideFlags:7}
-replaceitem entity @a[team=red] slot.armor.chest minecraft:leather_chestplate 1 0 {Unbreakable:true,ench:[{id:10s,lvl:1s}],display:{color:14816274},HideFlags:7}
+replaceitem entity @a[team=blue] slot.armor.chest minecraft:leather_chestplate 1 0 {Unbreakable:true,display:{color:1188322},HideFlags:7}
+replaceitem entity @a[team=red] slot.armor.chest minecraft:leather_chestplate 1 0 {Unbreakable:true,display:{color:14816274},HideFlags:7}
 give @a[score_role_min=0] minecraft:stone_sword
 give @a[score_role_min=0] minecraft:bow
 give @a[score_role_min=0] minecraft:cooked_beef 64
