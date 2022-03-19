@@ -1,5 +1,4 @@
 bossbar add kcdk:temp "temp"
-
 bossbar set kcdk:temp color white
 bossbar set kcdk:temp max 100
 bossbar set kcdk:temp name "temp"

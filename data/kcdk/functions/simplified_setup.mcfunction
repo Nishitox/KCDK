@@ -1,8 +1,8 @@
 function kcdk:bossbar/add/general
 function kcdk:team/add/batch
 
-function kcdk:general/initial_settings/gamerules
-function kcdk:general/initial_settings/scoreboard
+function kcdk:common/initial_settings/gamerules
+function kcdk:common/initial_settings/scoreboard
 
 function kcdk:score/detect_version
 function kcdk:ptp/setup

@@ -20,5 +20,5 @@ execute positioned ~-1 ~ ~ if score return kcdk.control matches 0 run setblock ~
 execute positioned ~ ~ ~ run function kcdk:plugin/bm/up/score/return/exclusion_list/center
 execute positioned ~ ~ ~ if score return kcdk.control matches 0 run setblock ~ ~ ~ minecraft:air
 
-#execute positioned ~ ~1 ~ run function kcdk:plugin/bm/up/score/return/exclusion_list/center
-#execute positioned ~ ~1 ~ if score return kcdk.control matches 0 run function kcdk:plugin/bm/up/root
+# execute positioned ~ ~1 ~ run function kcdk:plugin/bm/up/score/return/exclusion_list/center
+# execute positioned ~ ~1 ~ if score return kcdk.control matches 0 run function kcdk:plugin/bm/up/root

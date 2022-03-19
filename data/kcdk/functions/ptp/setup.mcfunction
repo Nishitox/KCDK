@@ -1,4 +1,4 @@
-#KCDKのセットアップが実行されたときに実行される関数です。
+# KCDKのセットアップが実行されたときに実行される関数です。
 
 function kcdk:plugin/igui/setup
 function kcdk:plugin/join/setup

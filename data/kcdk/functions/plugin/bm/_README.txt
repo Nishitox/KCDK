@@ -1,29 +1,24 @@
 Block Modification / BM（標準）
 ブロック操作等のツールセットです。
 ---------------------------------------------------------------------------------------------------
-BM.Up Blocks：
-ブロックを実行位置まで上げます。
-「/function kcdk:plugin/bm/up/get」でコマンドを入手します。
+BM.Up Blocks：ブロックを実行位置まで上げます。
+・「/function kcdk:plugin/bm/up/get」でコマンドを入手します。
 
-BM.Down Blocks：
-ブロックを実行位置まで下げます。
-「/function kcdk:plugin/bm/down/get」でコマンドを入手します。
+BM.Down Blocks：ブロックを実行位置まで下げます。
+・「/function kcdk:plugin/bm/down/get」でコマンドを入手します。
 
-BM.Optimize：
-キットの最適化を行います。
-「/function kcdk:plugin/bm/opt/get」でコマンドを入手します。
-KCDKのバージョンが表記されている看板の上に設置してください。
+BM.Optimize：キットの最適化を行います。
+・「/function kcdk:plugin/bm/opt/get」でコマンドを入手します。
+・KCDKのバージョンが表記されている看板の上に設置してください。
 
-BM.Deploy Point：
-『set deploy』の座標を再設定します。
-「/function kcdk:plugin/bm/deploy/get」でコマンドを入手します。
-インパルスコマンドの下に設置してください。
+BM.Deploy Point：『set deploy』の座標を再設定します。
+・「/function kcdk:plugin/bm/deploy/get」でコマンドを入手します。
+・インパルスコマンドの下に設置してください。
 ※『set deploy』の設定前に実行してください。元の設定は上書きされます。
 
-BM.Off Def Switch：
-『set deploy』を攻守交替に適した形に設定します。
-「/function kcdk:plugin/bm/offdef/get」でコマンドを入手します。
-インパルスコマンドの下に設置してください。
+BM.Off Def Switch：『set deploy』を攻守交替に適した形に設定します。
+・「/function kcdk:plugin/bm/offdef/get」でコマンドを入手します。
+・インパルスコマンドの下に設置してください。
 ※『set deploy』の設定前に実行してください。元の設定は上書きされます。
 ---------------------------------------------------------------------------------------------------
 導入方法：
@@ -31,5 +26,5 @@ BM.Off Def Switch：
 ※この拡張機能は既に導入されています。この手順を踏む必要はありません。
 
 設定方法：
-・〈./score/return/exclusion_list/〉で操作から除外するブロックを指定できます。
+・〈./<deploy|up|down|offdef|opt>/score/return/exclusion_list/〉で操作から除外するブロックを指定できます。
 ---------------------------------------------------------------------------------------------------
