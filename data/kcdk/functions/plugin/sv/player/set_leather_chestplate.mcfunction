@@ -1,0 +1,4 @@
+replaceitem entity @s[team=blue] armor.chest minecraft:leather_chestplate{Unbreakable:true,Enchantments:[{id:"minecraft:vanishing_curse",lvl:1s}],display:{color:255f},HideFlags:7}
+replaceitem entity @s[team=green] armor.chest minecraft:leather_chestplate{Unbreakable:true,Enchantments:[{id:"minecraft:vanishing_curse",lvl:1s}],display:{color:32768f},HideFlags:7}
+replaceitem entity @s[team=red] armor.chest minecraft:leather_chestplate{Unbreakable:true,Enchantments:[{id:"minecraft:vanishing_curse",lvl:1s}],display:{color:16711680f},HideFlags:7}
+replaceitem entity @s[team=yellow] armor.chest minecraft:leather_chestplate{Unbreakable:true,Enchantments:[{id:"minecraft:vanishing_curse",lvl:1s}],display:{color:16776960f},HideFlags:7}

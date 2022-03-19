@@ -1,0 +1,1 @@
+kill @e[type=minecraft:falling_block,tag=kcdkp.sv.beacon,distance=..1,limit=1]

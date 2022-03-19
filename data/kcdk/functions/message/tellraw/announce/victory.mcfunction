@@ -2,3 +2,8 @@ execute if score victory kcdk.control matches 1 run tellraw @a ["",{"text":"\n[k
 execute if score victory kcdk.control matches 2 run tellraw @a ["",{"text":"\n[kcdk:announce] ","color":"gray"},{"text":"緑チームの勝利\n"}]
 execute if score victory kcdk.control matches 3 run tellraw @a ["",{"text":"\n[kcdk:announce] ","color":"gray"},{"text":"赤チームの勝利\n"}]
 execute if score victory kcdk.control matches 4 run tellraw @a ["",{"text":"\n[kcdk:announce] ","color":"gray"},{"text":"黄色チームの勝利\n"}]
+execute if score victory kcdk.control matches 5 run tellraw @a ["",{"text":"\n[kcdk:announce] ","color":"gray"},{"text":"青チームの敗北\n"}]
+execute if score victory kcdk.control matches 6 run tellraw @a ["",{"text":"\n[kcdk:announce] ","color":"gray"},{"text":"緑チームの敗北\n"}]
+execute if score victory kcdk.control matches 7 run tellraw @a ["",{"text":"\n[kcdk:announce] ","color":"gray"},{"text":"赤チームの敗北\n"}]
+execute if score victory kcdk.control matches 8 run tellraw @a ["",{"text":"\n[kcdk:announce] ","color":"gray"},{"text":"黄色チームの敗北\n"}]
+execute if score victory kcdk.control matches 9.. run tellraw @a ["",{"text":"\n[kcdk:announce] ","color":"gray"},{"text":"試合終了\n"}]

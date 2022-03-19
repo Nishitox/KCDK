@@ -4,9 +4,11 @@ function kcdk:plugin/igui/library/fill_icon/frame_1
 function kcdk:plugin/igui/page/plugin/fill_icon/13b_reset_plugin
 function kcdk:plugin/igui/page/plugin/fill_icon/14b_setup_plugin
 function kcdk:plugin/igui/page/plugin/fill_icon/15b_kcdkm
+function kcdk:plugin/igui/page/plugin/fill_icon/bm/22b_up_blocks
+function kcdk:plugin/igui/page/plugin/fill_icon/bm/23b_deploy_point
+function kcdk:plugin/igui/page/plugin/fill_icon/bm/24b_off_def_switch
 function kcdk:plugin/igui/page/plugin/fill_icon/bm/31b_down_blocks
-function kcdk:plugin/igui/page/plugin/fill_icon/bm/32b_deploy_point
-function kcdk:plugin/igui/page/plugin/fill_icon/bm/33boff_def_switch
+function kcdk:plugin/igui/page/plugin/fill_icon/bm/32b_optimize
 
 function kcdk:plugin/igui/page/plugin/fill_icon/18b_igui
 function kcdk:plugin/igui/page/plugin/fill_icon/19b_join

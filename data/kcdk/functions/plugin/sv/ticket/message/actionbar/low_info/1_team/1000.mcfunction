@@ -1,0 +1,1 @@
+title @a actionbar ["",{"score":{"name":"everyone","objective":"kcdk.players"}},{"text":"人が参加中 青チーム:"},{"score":{"name":"blue","objective":"kcdk.players"}},{"text":"/"},{"score":{"name":"blue","objective":"kcdkp.sv.ticket"}},{"text":"t"}]

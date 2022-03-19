@@ -1,0 +1,1 @@
+tellraw @a ["",{"text":"\n[kcdkp:sv] ","color":"blue"},{"text":"青チームのチケットが無くなりました。\n"}]

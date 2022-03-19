@@ -1,0 +1,1 @@
+tellraw @a ["",{"text":"[kcdkp:sv] ","color":"yellow"},{"text":"黄色チームのビーコンが攻撃を受けています。残り"},{"score":{"name":"yellow","objective":"kcdkp.sv.beacon"}},{"text":"/"},{"score":{"name":"max","objective":"kcdkp.sv.beacon"}}]

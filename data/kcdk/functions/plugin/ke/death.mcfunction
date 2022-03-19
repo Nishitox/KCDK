@@ -1,0 +1,1 @@
+execute as @a[nbt={DeathTime:1s}] run scoreboard players reset @s kcdkp.ke.kill

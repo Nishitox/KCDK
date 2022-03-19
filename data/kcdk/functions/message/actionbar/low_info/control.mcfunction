@@ -1,4 +1,4 @@
-execute if score teams kcdk.control matches 0000 run function kcdk:message/actionbar/low_info/0_team/0000
+execute if score teams kcdk.control matches 0000 run function kcdk:message/actionbar/low_info/no_team
 
 execute if score teams kcdk.control matches 1000 run function kcdk:message/actionbar/low_info/1_team/1000
 execute if score teams kcdk.control matches 0100 run function kcdk:message/actionbar/low_info/1_team/0100

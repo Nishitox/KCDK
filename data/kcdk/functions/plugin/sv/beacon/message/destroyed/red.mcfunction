@@ -1,0 +1,1 @@
+tellraw @a ["",{"text":"\n[kcdkp:sv] ","color":"red"},{"text":"赤チームのビーコンが破壊されました。\n"}]

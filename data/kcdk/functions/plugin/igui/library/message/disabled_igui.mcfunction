@@ -1,1 +1,1 @@
-tellraw @a ["",{"text":"\n[kcdkp.igui] ","color":"gray"},{"text":"iguiを無効にしました。再度有効にしますか？ "},{"text":"有効にする\n","underlined":true,"clickEvent":{"action":"run_command","value":"/scoreboard players set igui kcdk.config 1"}}]
+tellraw @a ["",{"text":"\n[kcdkp:igui] ","color":"gray"},{"text":"iguiを無効にしました。再度有効にしますか？ "},{"text":"有効にする\n","underlined":true,"clickEvent":{"action":"run_command","value":"/scoreboard players set igui kcdk.config 1"}}]

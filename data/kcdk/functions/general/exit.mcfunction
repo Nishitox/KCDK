@@ -1,0 +1,1 @@
+function kcdk:general/exit
