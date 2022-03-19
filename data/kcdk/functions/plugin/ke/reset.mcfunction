@@ -1,0 +1,1 @@
+scoreboard players reset * kcdkp.ke.kill

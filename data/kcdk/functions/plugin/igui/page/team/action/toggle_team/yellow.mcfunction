@@ -1,3 +1,4 @@
-function kcdk:plugin/igui/player/clear_cursor/change_gm
-function kcdk:plugin/igui/score/toggle_team/yellow
-function kcdk:plugin/igui/page/team/action/fill_icon/team_icons
+function kcdk:plugin/igui/library/clear/change_gm
+
+function kcdk:plugin/igui/page/team/score/toggle_team/yellow
+function kcdk:plugin/igui/page/team/fill_icon/team_icons

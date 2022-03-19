@@ -1,12 +1,12 @@
-function kcdk:plugin/igui/player/clear
-function kcdk:plugin/igui/page/top/action/fill_icon/reset_score
-function kcdk:plugin/igui/page/top/action/fill_icon/start_end_game
-function kcdk:plugin/igui/page/top/action/fill_icon/kcdk
-function kcdk:plugin/igui/page/top/action/fill_icon/incomplete_setup
-function kcdk:plugin/igui/page/top/action/fill_icon/move_blocks
+function kcdk:plugin/igui/library/clear
+function kcdk:plugin/igui/page/top/fill_icon/18b_reset_score
+function kcdk:plugin/igui/page/top/fill_icon/20b_start_end_game
+function kcdk:plugin/igui/page/top/fill_icon/21b_kcdk
+function kcdk:plugin/igui/page/top/fill_icon/22b_file
+function kcdk:plugin/igui/page/top/fill_icon/23b_team
+function kcdk:plugin/igui/page/top/fill_icon/24b_plugin
+function kcdk:plugin/igui/page/top/fill_icon/26b_hidden
+function kcdk:plugin/igui/page/top/fill_icon/27b_setup
+function kcdk:plugin/igui/page/top/fill_icon/35b_page
 
-replaceitem entity @s inventory.13 minecraft:book{display:{Name:"{\"text\":\"ファイル...\"}"}}
-replaceitem entity @s inventory.14 minecraft:leather_helmet{display:{Name:"{\"text\":\"チームの操作...\"}"},HideFlags:2}
-replaceitem entity @s inventory.17 minecraft:map{display:{Name:"{\"text\":\"ページの非表示\"}"}}
-replaceitem entity @s inventory.26 minecraft:paper{display:{Name:"{\"text\":\"kcdkp.igui.top\"}"}}
-function kcdk:plugin/igui/score/return/open_page
+function kcdk:plugin/igui/library/score/return/open_page

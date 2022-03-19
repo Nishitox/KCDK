@@ -1,0 +1,1 @@
+tellraw @s ["",{"text":"\n[kcdkp.igui] ","color":"gray"},{"text":"iguiを無効にしますか？ "},{"text":"無効にする\n","underlined":true,"clickEvent":{"action":"run_command","value":"/function kcdk:plugin/igui/library/action/disable_igui"}}]

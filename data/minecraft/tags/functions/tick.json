@@ -1,5 +1,5 @@
 {
     "values": [
-        "kcdk:always_run_plugin"
+        "kcdk:ptp/always"
     ]
 }

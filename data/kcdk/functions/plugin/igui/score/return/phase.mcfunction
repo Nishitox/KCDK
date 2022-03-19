@@ -1,1 +1,0 @@
-scoreboard players operation return kcdk.control = phase kcdk.control

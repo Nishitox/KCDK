@@ -1,0 +1,23 @@
+{
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "loot_table",
+                    "name": "kcdk:dice/var",
+                    "weight": 1,
+                    "functions": [
+						{
+							"function": "minecraft:set_count",
+							"count": {
+                                "min": 1,
+                                "max": 4
+                            }
+						}
+                    ]
+                }
+            ]
+        }
+    ]
+}

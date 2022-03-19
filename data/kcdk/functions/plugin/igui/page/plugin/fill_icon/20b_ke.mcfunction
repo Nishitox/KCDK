@@ -1,0 +1,3 @@
+execute if score ke kcdk.config matches 0 run replaceitem entity @s inventory.11 minecraft:gray_dye{display:{Name:"{\"text\":\"ke\"}",Lore:["{\"text\":\"キル演出を追加します。\",\"color\":\"dark_gray\"}","{\"text\":\"無効に設定されています\",\"color\":\"dark_gray\"}"]}}
+execute if score ke kcdk.config matches 1 run replaceitem entity @s inventory.11 minecraft:lime_dye{display:{Name:"{\"text\":\"ke - normal\"}",Lore:["{\"text\":\"キル演出を追加します\",\"color\":\"dark_gray\"}","{\"text\":\"有効に設定されています\",\"color\":\"dark_gray\"}"]}} 1
+execute if score ke kcdk.config matches 2 run replaceitem entity @s inventory.11 minecraft:lime_dye{display:{Name:"{\"text\":\"ke - insane\"}",Lore:["{\"text\":\"キル演出を追加します\",\"color\":\"dark_gray\"}","{\"text\":\"有効に設定されています\",\"color\":\"dark_gray\"}"]}} 2

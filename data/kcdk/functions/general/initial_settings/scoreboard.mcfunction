@@ -6,6 +6,7 @@ scoreboard objectives add kcdk.players dummy
 scoreboard objectives add kcdk.role dummy
 scoreboard objectives add health health
 scoreboard objectives setdisplay sidebar.team.aqua kcdk.control
+scoreboard objectives setdisplay belowName health
 
 scoreboard players reset * kcdk.button
 scoreboard players reset * kcdk.control
@@ -14,11 +15,11 @@ scoreboard players reset * kcdk.players
 scoreboard players reset * kcdk.role
 scoreboard players reset * health
 
+scoreboard players set arg kcdk.control 0
 scoreboard players set phase kcdk.control 0
 scoreboard players set return kcdk.control 0
 scoreboard players set teams kcdk.control 0
-scoreboard players set remove_column kcdk.control 0
-scoreboard players set select_column kcdk.control 0
+scoreboard players set temp kcdk.control 0
 scoreboard players set time_m kcdk.control 0
 scoreboard players set time_s kcdk.control 0
 scoreboard players set time_t kcdk.control 0

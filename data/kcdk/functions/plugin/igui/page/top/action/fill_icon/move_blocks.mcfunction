@@ -1,1 +1,0 @@
-replaceitem entity @s inventory.15 minecraft:command_block{display:{Name:"{\"text\":\"tool: move blocks\"}",Lore:["{\"text\":\"ブロックを実行位置まで下げます\",\"color\":\"dark_gray\"}"]},BlockEntityTag:{Command:"function kcdk:plugin/mb/gate",auto:true}}

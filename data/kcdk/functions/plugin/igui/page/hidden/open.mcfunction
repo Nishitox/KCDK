@@ -1,4 +1,4 @@
-function kcdk:plugin/igui/player/clear
+function kcdk:plugin/igui/library/clear
+function kcdk:plugin/igui/page/hidden/fill_icon/35b_page
 
-replaceitem entity @s inventory.26 minecraft:paper{display:{Name:"{\"text\":\"kcdkp.igui.hidden\"}"}}
-function kcdk:plugin/igui/score/return/open_page
+function kcdk:plugin/igui/library/score/return/open_page

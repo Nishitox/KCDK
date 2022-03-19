@@ -1,0 +1,17 @@
+{
+	"display": {
+		"icon": {
+			"item": "minecraft:white_concrete"
+		},
+		"frame": "goal",
+		"title": "KCDK",
+		"description": "",
+		"background": "minecraft:textures/misc/forcefield.png",
+		"announce_to_chat": false
+	},
+	"criteria": {
+		"": {
+			"trigger": "impossible"
+		}
+	}
+}

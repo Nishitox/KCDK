@@ -1,0 +1,25 @@
+{
+    "parent": "kcdk:root",
+    "display": {
+        "icon": {
+            "item": "minecraft:stone"
+        },
+        "title": "player_killed_player",
+        "description": "",
+        "show_toast": false,
+        "announce_to_chat": false
+    },
+    "criteria": {
+        "": {
+            "trigger": "player_killed_entity",
+            "conditions": {
+                "entity": {
+                    "type": "minecraft:player"
+                }
+            }
+        }
+    },
+    "rewards": {
+        "function": "kcdk:plugin/ke/gate"
+    }
+}
