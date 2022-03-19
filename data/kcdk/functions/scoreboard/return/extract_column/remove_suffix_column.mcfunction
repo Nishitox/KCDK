@@ -1,0 +1,4 @@
+execute if score select_column bcs.control matches 1..9 unless score return bcs.control matches 1..9 run scoreboard players operation return bcs.control /= remove_column bcs.control
+execute if score select_column bcs.control matches 1..9 unless score return bcs.control matches 1..9 run function bcs:library/scoreboard/extract_column/remove_suffix_column
+execute if score select_column bcs.control matches 1..99 unless score return bcs.control matches 1..99 run scoreboard players operation return bcs.control /= remove_column bcs.control
+execute if score select_column bcs.control matches 1..99 unless score return bcs.control matches 1..99 run function bcs:library/scoreboard/extract_column/remove_suffix_column

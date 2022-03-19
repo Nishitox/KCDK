@@ -1,4 +1,4 @@
-execute store result score blue kcdk.teams if entity @a[team=kcdk.blue]
-execute store result score green kcdk.teams if entity @a[team=kcdk.green]
-execute store result score red kcdk.teams if entity @a[team=kcdk.red]
-execute store result score yellow kcdk.teams if entity @a[team=kcdk.yellow]
+execute store result score blue kcdk.players if entity @a[team=blue]
+execute store result score green kcdk.players if entity @a[team=green]
+execute store result score red kcdk.players if entity @a[team=red]
+execute store result score yellow kcdk.players if entity @a[team=yellow]

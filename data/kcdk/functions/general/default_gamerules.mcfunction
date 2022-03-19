@@ -1,7 +1,7 @@
 gamerule announceAdvancements true
 gamerule commandBlockOutput true
 gamerule disableElytraMovementCheck false
-gamerule disableRaids false
+#1.14から gamerule disableRaids false
 gamerule doDaylightCycle true
 gamerule doEntityDrops true
 gamerule doFireTick true
