@@ -1,1 +1,0 @@
-scoreboard players set 2.0.0 kcdkm.status 1
