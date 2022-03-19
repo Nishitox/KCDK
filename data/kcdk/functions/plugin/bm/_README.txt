@@ -18,11 +18,13 @@ BM.Deploy Point：
 『set deploy』の座標を再設定します。
 「/function kcdk:plugin/bm/deploy/get」でコマンドを入手します。
 インパルスコマンドの下に設置してください。
+※『set deploy』の設定前に実行してください。元の設定は上書きされます。
 
 BM.Off Def Switch：
 『set deploy』を攻守交替に適した形に設定します。
 「/function kcdk:plugin/bm/offdef/get」でコマンドを入手します。
 インパルスコマンドの下に設置してください。
+※『set deploy』の設定前に実行してください。元の設定は上書きされます。
 ---------------------------------------------------------------------------------------------------
 導入方法：
 ①「bm.zip」を解凍して〈KCDK 2.0/data/kcdk/functions/plugin/〉に入れてください。
