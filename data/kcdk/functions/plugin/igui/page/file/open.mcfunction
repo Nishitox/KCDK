@@ -5,6 +5,7 @@ function kcdk:plugin/igui/page/file/fill_icon/item/10b_green_chestplate
 function kcdk:plugin/igui/page/file/fill_icon/item/11b_red_chestplate
 function kcdk:plugin/igui/page/file/fill_icon/item/18b_yellow_chestplate
 function kcdk:plugin/igui/page/file/fill_icon/item/19b_wooden_pickaxe
+function kcdk:plugin/igui/page/file/fill_icon/command/20b_dice
 
 function kcdk:plugin/igui/page/file/fill_icon/condition/13b_annihilation
 function kcdk:plugin/igui/page/file/fill_icon/condition/14b_destroy_beacon

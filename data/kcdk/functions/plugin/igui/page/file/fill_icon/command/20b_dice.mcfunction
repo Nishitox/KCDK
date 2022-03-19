@@ -1,0 +1,1 @@
+replaceitem entity @s inventory.11 minecraft:command_block{display:{Name:"{\"text\":\"command: dice(6)\"}",Lore:["{\"text\":\"1~6の整数をkcdk.control: returnに返します\",\"color\":\"dark_gray\"}"]},BlockEntityTag:{Command:"function kcdk:score/return/dice/6"}}

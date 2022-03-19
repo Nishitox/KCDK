@@ -10,7 +10,7 @@ execute if entity @s[nbt={Inventory:[{Slot:17b}]}] run replaceitem entity @s inv
 
 # execute if entity @s[nbt={Inventory:[{Slot:18b}]}] run replaceitem entity @s inventory.9 minecraft:air
 # execute if entity @s[nbt={Inventory:[{Slot:19b}]}] run replaceitem entity @s inventory.10 minecraft:air
-execute if entity @s[nbt={Inventory:[{Slot:20b}]}] run replaceitem entity @s inventory.11 minecraft:air
+# execute if entity @s[nbt={Inventory:[{Slot:20b}]}] run replaceitem entity @s inventory.11 minecraft:air
 # execute if entity @s[nbt={Inventory:[{Slot:21b}]}] run replaceitem entity @s inventory.12 minecraft:air
 # execute if entity @s[nbt={Inventory:[{Slot:22b}]}] run replaceitem entity @s inventory.13 minecraft:air
 execute if entity @s[nbt={Inventory:[{Slot:23b}]}] run replaceitem entity @s inventory.14 minecraft:air
@@ -40,6 +40,7 @@ execute if score return kcdk.control matches 2 unless entity @s[nbt={Inventory:[
 execute if score return kcdk.control matches 2 unless entity @s[nbt={Inventory:[{Count:1b,Slot:11b,id:"minecraft:command_block"}]}] run function kcdk:plugin/igui/page/file/fill_icon/item/11b_red_chestplate
 execute if score return kcdk.control matches 2 unless entity @s[nbt={Inventory:[{Count:1b,Slot:18b,id:"minecraft:command_block"}]}] run function kcdk:plugin/igui/page/file/fill_icon/item/18b_yellow_chestplate
 execute if score return kcdk.control matches 2 unless entity @s[nbt={Inventory:[{Count:1b,Slot:19b,id:"minecraft:command_block"}]}] run function kcdk:plugin/igui/page/file/fill_icon/item/19b_wooden_pickaxe
+execute if score return kcdk.control matches 2 unless entity @s[nbt={Inventory:[{Count:1b,Slot:20b,id:"minecraft:command_block"}]}] run function kcdk:plugin/igui/page/file/fill_icon/command/20b_dice
 
 execute if score return kcdk.control matches 2 unless entity @s[nbt={Inventory:[{Count:1b,Slot:13b,id:"minecraft:command_block"}]}] run function kcdk:plugin/igui/page/file/fill_icon/condition/13b_annihilation
 execute if score return kcdk.control matches 2 unless entity @s[nbt={Inventory:[{Count:1b,Slot:14b,id:"minecraft:command_block"}]}] run function kcdk:plugin/igui/page/file/fill_icon/condition/14b_destroy_beacon
