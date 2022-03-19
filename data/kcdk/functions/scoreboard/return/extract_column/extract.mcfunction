@@ -1,0 +1,2 @@
+function kcdk:scoreboard/return/extract_column/remove_pre
+function kcdk:scoreboard/return/extract_column/remove_suf

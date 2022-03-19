@@ -1,1 +1,1 @@
-tellraw @s ["",{"text":"\n[kcdk:announce] ","color":"gray"},{"text":"プレイヤーをチームに割り振りました。\n"}]
+tellraw @a ["",{"text":"\n[kcdk:announce] ","color":"gray"},{"text":"プレイヤーをチームに割り振りました。\n"}]

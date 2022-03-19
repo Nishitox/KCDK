@@ -1,0 +1,1 @@
+replaceitem entity @s inventory.1 minecraft:command_block{display:{Name:"{\"text\":\"destroy beacon\"}"},BlockEntityTag:{Command:"execute if score phase kcdk.control matches 2 unless block ~ ~ ~ minecraft:beacon run scoreboard players set victory kcdk.control 0"}}

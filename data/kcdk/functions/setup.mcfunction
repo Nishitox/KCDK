@@ -16,4 +16,4 @@ function kcdk:general/default_settings/worldspawn
 function kcdk:general/initial_settings/gamerules
 function kcdk:general/initial_settings/scoreboard
 
-execute as @a run function kcdk:message/tellraw/announce/setup_executed
+function kcdk:message/tellraw/announce/setup_executed

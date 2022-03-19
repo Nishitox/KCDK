@@ -1,1 +1,1 @@
-title @s actionbar ["",{"score":{"name":"exeryone","objective":"kcdk.players"}},{"text":"人が参加中 赤チーム:"},{"score":{"name":"red","objective":"kcdk.players"}}]
+title @a actionbar ["",{"score":{"name":"exeryone","objective":"kcdk.players"}},{"text":"人が参加中 赤チーム:"},{"score":{"name":"red","objective":"kcdk.players"}}]

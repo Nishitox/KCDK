@@ -1,1 +1,1 @@
-tellraw @s ["",{"text":"\n[kcdk:error] ","color":"red"},{"text":"チームが選択されていません。\n"}]
+tellraw @a ["",{"text":"\n[kcdk:error] ","color":"red"},{"text":"チームが選択されていません。\n"}]

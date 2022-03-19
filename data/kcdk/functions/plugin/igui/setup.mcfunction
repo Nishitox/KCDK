@@ -1,0 +1,1 @@
+scoreboard players set igui kcdk.config 1

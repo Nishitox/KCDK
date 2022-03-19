@@ -1,3 +1,3 @@
-title @s times 0 80 20
-title @s title ["",{"text":""}]
-title @s subtitle ["",{"text":"試合開始"}]
+title @a times 0 80 20
+title @a title ["",{"text":""}]
+title @a subtitle ["",{"text":"試合開始"}]

@@ -1,0 +1,1 @@
+replaceitem entity @s inventory.1 minecraft:command_block{display:{Name:"{\"text\":\"green leather chestplate\"}"},BlockEntityTag:{Command:"replaceitem entity @a[team=green] armor.chest minecraft:leather_chestplate{Unbreakable:true,Enchantments:[{id:\"minecraft:binding_curse\",lvl:1s}],display:{color:6192150f},HideFlags:7}"}}

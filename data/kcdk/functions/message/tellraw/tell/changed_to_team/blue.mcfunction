@@ -1,1 +1,0 @@
-tellraw @s ["",{"text":"\n[kcdk:tell] ","color":"gray"},{"text":"青チームに変更されました。\n"}]

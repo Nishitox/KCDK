@@ -4,7 +4,6 @@ scoreboard objectives add kcdk.control dummy
 scoreboard objectives add kcdk.death deathCount
 scoreboard objectives add kcdk.players dummy
 scoreboard objectives add kcdk.role dummy
-
 scoreboard objectives add health health
 scoreboard objectives setdisplay sidebar.team.aqua kcdk.control
 
