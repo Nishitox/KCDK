@@ -1,8 +1,10 @@
-﻿/[start_game]
+﻿/[start/end_game]
 //[phase]
-setblock ~4 ~-1 ~ minecraft:redstone_block
+execute if score phase control matches 0 run setblock ~4 ~-1 ~ minecraft:redstone_block
 //[set_timer]
-setblock ~2 ~-2 ~ minecraft:redstone_block
+execute if score phase control matches 0 run setblock ~2 ~-2 ~ minecraft:redstone_block
+//[reset_score]
+execute unless score phase control matches 0 run setblock ~6 ~-3 ~ minecraft:redstone_block
 ---------------------------------------------------------------------------------------------------
 /[set_timer]
 setblock ~ ~-1 ~ minecraft:air
@@ -45,7 +47,7 @@ execute if score phase control matches 3 if score victory control matches 2 run 
 execute if score phase control matches 3 if score victory control matches 2 run title @a title {"text":"赤チームの勝利","color":"red"}
 [red_subtitle]
 execute if score phase control matches 3 if score victory control matches 2 run title @a subtitle {"text":""}
-execute if score phase control matches 3 as @a at @s run playsound minecraft:block.anvil.destroy master @s ~ ~ ~ 10 0.9
+execute if score phase control matches 3 as @a at @s run playsound minecraft:block.anvil.use master @s ~ ~ ~ 10 0.9
 ---------------------------------------------------------------------------------------------------
 /[result]
 setblock ~ ~-1 ~ minecraft:air
@@ -76,26 +78,27 @@ execute if score phase control matches 2 unless score victory control matches 0 
 //[reset_score]
 execute if score phase control matches 2 unless score victory control matches 0 run setblock ~-6 ~-9 ~ minecraft:redstone_block
 ---------------------------------------------------------------------------------------------------
-/[trigger_victory]
+/[victory_trigger]
 [blue_trigger]
 execute if score phase control matches 2 
 [red_trigger]
 execute if score phase control matches 2 
 ---------------------------------------------------------------------------------------------------
 /[timer]
+execute if score timer_t control matches 0 if score timer_s control matches 0 if score timer_m control matches 1..59 run scoreboard players set timer_s control 60
+execute if score timer_t control matches 0 if score timer_s control matches 60 if score timer_m control matches 1..59 run scoreboard players remove timer_m control 1
+execute if score timer_t control matches 0 if score timer_s control matches 1..60 run scoreboard players remove timer_s control 1
+execute if score timer_t control matches 0 if score timer_s control matches 1..59 run scoreboard players set timer_t control 20
+execute if score timer_t control matches 0 if score timer_s control matches 0 if score timer_m control matches 1..59 run scoreboard players set timer_t control 20
 execute if score timer_t control matches 1..20 run scoreboard players remove timer_t control 1
-execute if score timer_t control matches 0 if score timer_s control matches 0 if score timer_m control matches 1..60 run scoreboard players set timer_s control 60
-execute if score timer_t control matches 0 if score timer_s control matches 60 if score timer_m control matches 1..60 run scoreboard players remove timer_m control 1
-execute if score timer_t control matches 0 if score timer_s control matches 1..60 run scoreboard players set timer_t control 20
-execute if score timer_t control matches 20 if score timer_s control matches 1..60 run scoreboard players remove timer_s control 1
-execute if score timer_t control matches 20 if score timer_s control matches 1..10 if score timer_m control matches 0 as @a at @s run playsound minecraft:block.note_block.hat master @s ~ ~ ~ 10 1
+execute if score timer_t control matches 19 if score timer_s control matches 1..10 if score timer_m control matches 0 as @a at @s run playsound minecraft:block.note_block.hat master @s ~ ~ ~ 10 1
 ---------------------------------------------------------------------------------------------------
 /[time]
+execute if score phase control matches 2 if score time_t control matches 0..19 if score time_m control matches 0..59 run scoreboard players add time_t control 1
 execute if score time_t control matches 20 if score time_s control matches 0..59 run scoreboard players add time_s control 1
 execute if score time_t control matches 20 if score time_s control matches 60 run scoreboard players set time_s control 0
 execute if score time_t control matches 20 if score time_s control matches 0 if score time_m control matches 0..59 run scoreboard players add time_m control 1
 execute if score time_t control matches 20 if score time_s control matches 0..59 if score time_m control matches 0..60 run scoreboard players set time_t control 0
-execute if score phase control matches 2 if score time_t control matches 0..19 if score time_m control matches 0..59 run scoreboard players add time_t control 1
 ---------------------------------------------------------------------------------------------------
 /[death]
 [spectator_blue]
@@ -112,13 +115,13 @@ execute if score phase control matches 1..2 store result score team_blue control
 execute if score phase control matches 1..2 store result score team_red control if entity @a[team=red,gamemode=adventure]
 ---------------------------------------------------------------------------------------------------
 /[title_actionbar]
-execute if score timer_t control matches 0 if score time_t control matches 0 unless score time_m control matches 60 run title @a actionbar ["",{"text":"("},{"score":{"name":"players","objective":"control"}},{"text":"人が参加中 青チーム:"},{"score":{"name":"team_blue","objective":"control"}},{"text":" 赤チーム:"},{"score":{"name":"team_red","objective":"control"}},{"text":")"}]
+execute if score timer_t control matches 0 if score timer_s control matches 0 if score timer_m control matches 0 if score time_t control matches 0 if score time_s control matches 0 if score time_m control matches 0 run title @a actionbar ["",{"text":"("},{"score":{"name":"players","objective":"control"}},{"text":"人が参加中 青チーム:"},{"score":{"name":"team_blue","objective":"control"}},{"text":" 赤チーム:"},{"score":{"name":"team_red","objective":"control"}},{"text":")"}]
 execute if score phase control matches 1 if score timer_s control matches 1..59 run title @a actionbar ["",{"text":"("},{"score":{"name":"timer_s","objective":"control"}},{"text":"秒後にゲームを開始します)"}]
 execute if score phase control matches 2 if score timer_s control matches 1..59 if score timer_m control matches 1..59 run title @a actionbar ["",{"text":"("},{"score":{"name":"players","objective":"control"}},{"text":"人が参加中 青チーム:"},{"score":{"name":"team_blue","objective":"control"}},{"text":" 赤チーム:"},{"score":{"name":"team_red","objective":"control"}},{"text":" 残り"},{"score":{"name":"timer_m","objective":"control"}},{"text":"分"},{"score":{"name":"timer_s","objective":"control"}},{"text":"秒)"}]
-execute if score phase control matches 2 if score timer_s control matches 0 if score timer_m control matches 1..59 run title @a actionbar ["",{"text":"("},{"score":{"name":"players","objective":"control"}},{"text":"人が参加中 青チーム:"},{"score":{"name":"team_blue","objective":"control"}},{"text":" 赤チーム:"},{"score":{"name":"team_red","objective":"control"}},{"text":" 残り"},{"score":{"name":"timer_m","objective":"control"}},{"text":"分}"}]
+execute if score phase control matches 2 if score timer_s control matches 0 if score timer_m control matches 1..59 run title @a actionbar ["",{"text":"("},{"score":{"name":"players","objective":"control"}},{"text":"人が参加中 青チーム:"},{"score":{"name":"team_blue","objective":"control"}},{"text":" 赤チーム:"},{"score":{"name":"team_red","objective":"control"}},{"text":" 残り"},{"score":{"name":"timer_m","objective":"control"}},{"text":"分)"}]
 execute if score phase control matches 2 if score timer_s control matches 1..59 if score timer_m control matches 0 run title @a actionbar ["",{"text":"("},{"score":{"name":"players","objective":"control"}},{"text":"人が参加中 青チーム:"},{"score":{"name":"team_blue","objective":"control"}},{"text":" 赤チーム:"},{"score":{"name":"team_red","objective":"control"}},{"text":" 残り"},{"score":{"name":"timer_s","objective":"control"}},{"text":"秒)"}]
 execute if score phase control matches 2 if score time_s control matches 1..60 if score time_m control matches 1..60 run title @a actionbar ["",{"text":"("},{"score":{"name":"players","objective":"control"}},{"text":"人が参加中 青チーム:"},{"score":{"name":"team_blue","objective":"control"}},{"text":" 赤チーム:"},{"score":{"name":"team_red","objective":"control"}},{"text":" 経過時間:"},{"score":{"name":"time_m","objective":"control"}},{"text":"分"},{"score":{"name":"time_s","objective":"control"}},{"text":"秒)"}]
-execute if score phase control matches 2 if score time_s control matches 0 if score time_m control matches 1..60 run title @a actionbar ["",{"text":"("},{"score":{"name":"players","objective":"control"}},{"text":"人が参加中 青チーム:"},{"score":{"name":"team_blue","objective":"control"}},{"text":" 赤チーム:"},{"score":{"name":"team_red","objective":"control"}},{"text":" 経過時間:"},{"score":{"name":"time_m","objective":"control"}},{"text":"分}"}]
+execute if score phase control matches 2 if score time_s control matches 0 if score time_m control matches 1..60 run title @a actionbar ["",{"text":"("},{"score":{"name":"players","objective":"control"}},{"text":"人が参加中 青チーム:"},{"score":{"name":"team_blue","objective":"control"}},{"text":" 赤チーム:"},{"score":{"name":"team_red","objective":"control"}},{"text":" 経過時間:"},{"score":{"name":"time_m","objective":"control"}},{"text":"分)"}]
 execute if score phase control matches 2 if score time_s control matches 1..60 if score time_m control matches 0 run title @a actionbar ["",{"text":"("},{"score":{"name":"players","objective":"control"}},{"text":"人が参加中 青チーム:"},{"score":{"name":"team_blue","objective":"control"}},{"text":" 赤チーム:"},{"score":{"name":"team_red","objective":"control"}},{"text":" 経過時間:"},{"score":{"name":"time_s","objective":"control"}},{"text":"秒)"}]
 ---------------------------------------------------------------------------------------------------
 /[set_players]
