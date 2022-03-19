@@ -1,0 +1,1 @@
+execute unless block ~ ~ ~ minecraft:air run setblock ~ ~ ~ minecraft:air destroy
