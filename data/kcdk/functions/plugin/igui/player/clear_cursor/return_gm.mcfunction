@@ -6,3 +6,5 @@ tag @s remove kcdkp.igui.adv
 tag @s remove kcdkp.igui.cre
 tag @s remove kcdkp.igui.sur
 tag @s remove kcdkp.igui.cc
+
+execute at @s run playsound minecraft:block.note_block.hat master @s ~ ~ ~ 0.3 1.8

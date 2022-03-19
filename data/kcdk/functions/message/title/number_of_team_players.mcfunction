@@ -1,4 +1,4 @@
-function kcdk:scoreboard/store/number_of_team_players
+function kcdk:score/store/number_of_team_players
 title @a times 0 100 20
 
 execute if score teams kcdk.control matches 1000 run title @a title ["",{"score":{"name":"blue","objective":"kcdk.players"},"color":"blue","color":"blue"}]

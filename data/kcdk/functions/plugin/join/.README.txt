@@ -1,0 +1,12 @@
+Join
+
+ワールドにログインしたときにゲームモードを変更するメニューを表示させます。
+この拡張機能は kcdk.control: button の 1~4 を使用します。
+
+導入方法
+join.zipを解凍して kcdk:function/plugin/ に入れてください。
+function kcdk:plugin/join/setup を実行してください。
+
+設定方法
+scoreboard players set join kcdk.config 0 で拡張機能を無効にします。
+scoreboard players set join kcdk.config 1 で拡張機能を有効にします。

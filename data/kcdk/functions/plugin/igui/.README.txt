@@ -1,0 +1,13 @@
+Inventory Graphical User Interface / IGUI
+
+インベントリにGUIを追加します。
+kcdk.admin チームで使用することができます。
+
+導入方法
+igui.zipを解凍して kcdk:function/plugin/ に入れてください。
+function kcdk:plugin/igui/setup を実行してください。
+
+設定方法
+player_to_run ファイルで拡張機能を適用するプレイヤーを指定できます。
+scoreboard players set igui kcdk.config 0 で拡張機能を無効にします。
+scoreboard players set igui kcdk.config 1 で拡張機能を有効にします。

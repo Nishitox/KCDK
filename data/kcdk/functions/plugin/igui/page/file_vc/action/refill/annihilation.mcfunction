@@ -1,1 +1,0 @@
-replaceitem entity @s inventory.0 minecraft:command_block{display:{Name:"{\"text\":\"annihilation\"}"},BlockEntityTag:{Command:"execute if score phase kcdk.control matches 2 if score <team> kcdk.players matches 0 run scoreboard players set victory kcdk.control 0"}}

@@ -1,0 +1,8 @@
+KCDK Manager / KCDKM
+
+KCDK Manager(データパック) 専用の拡張機能です。
+KCDK が有効になっているか調べます。
+
+導入方法
+kcdkm.zipを解凍して kcdk:function/plugin/ に入れてください。
+KCDK Manager(データパック) が導入されていないと機能しません。

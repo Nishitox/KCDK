@@ -1,0 +1,1 @@
+replaceitem entity @s inventory.9 minecraft:book{display:{Name:"{\"text\":\"チーム入れ替え\"}"}}

@@ -1,2 +1,2 @@
-function kcdk:player/set_spawnpoint
-function kcdk:player/set_position
+spawnpoint @s ~ ~ ~
+tp @s ~ ~ ~

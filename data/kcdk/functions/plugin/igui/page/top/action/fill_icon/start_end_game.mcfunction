@@ -1,0 +1,1 @@
+replaceitem entity @s inventory.11 minecraft:firework_rocket{display:{Name:"{\"text\":\"ゲームの開始/終了\"}",Lore:["{\"text\":\"start/end_game や reset に設置した\",\"color\":\"dark_gray\"}","{\"text\":\"コマンドを実行することはできません\",\"color\":\"dark_gray\"}","{\"text\":\"またカウントダウンは10秒に固定されます\",\"color\":\"dark_gray\"}"]}}

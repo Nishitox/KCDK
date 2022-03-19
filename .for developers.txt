@@ -1,0 +1,19 @@
+バージョン毎に変更が必要な個所
+functions:message/tellraw/announce/incomplete_setup_executed
+ln 1, col 120: パスを最新にしてください
+
+functions:message/tellraw/announce/setup_executed
+ln 1, col 118: パスを最新にしてください
+
+functions:plugin/kcdkm/reply/(version-name)
+ファイル名を最新にしてください
+ln 1, col 24: スコアボード名を最新にしてください
+
+functions:get
+ln 1, col 62: ストラクチャー名を最新にしてください
+
+functions:plugin/igui/page/top/action/fill_icon/kcdk
+ln 1, col 89: ストラクチャー名を最新にしてください
+
+structures:(version-name)
+ファイル名を最新にしてください

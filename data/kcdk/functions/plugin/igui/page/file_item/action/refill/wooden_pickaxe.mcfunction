@@ -1,1 +1,0 @@
-replaceitem entity @s inventory.4 minecraft:command_block{display:{Name:"{\"text\":\"wooden pickaxe\"}"},BlockEntityTag:{Command:"give @a[scores={kcdk.role=0..}] minecraft:wooden_pickaxe{Unbreakable:true,HideFlags:6,CanDestroy:[beacon]}"}}
