@@ -1,5 +1,3 @@
-scoreboard players set max_flag_progress kcdkp.dmn 200
-
 scoreboard players set cap_a kcdkp.dmn 0
 scoreboard players set cap_b kcdkp.dmn 0
 scoreboard players set cap_c kcdkp.dmn 0

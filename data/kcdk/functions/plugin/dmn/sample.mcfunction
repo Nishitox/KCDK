@@ -1,33 +1,38 @@
-#gate
-execute as @a[x=-2028,y=5,z=-2532,dx=9,dy=3,dz=8] run function kcdk:plugin/dmn/flag/a_flag/gate
-execute as @a[x=-2068,y=5,z=-2488,dx=12,dy=4,dz=10] run function kcdk:plugin/dmn/flag/b_flag/gate
-execute as @a[x=-2025,y=5,z=-2449,dx=12,dy=8,dz=6] run function kcdk:plugin/dmn/flag/c_flag/gate
+function kcdk:common/exit
+
+# dmnの設定サンプルです。本テキストと本拡張機能の「_README.txt」を参考に設定してください
+# 本テキストの表記「# ctower:death」は、コマンドタワーの「death」を指します
+
+# setup ※初回時に以下のコマンドを実行してください
+function kcdk:plugin/dmn/setup
+
+#--------------------------------------------------------------------------------------------------
+
+# コマンドタワーの追加
+
+# ctower:kcdkp.dmn.flag
+# @a[~]の範囲を各拠点の範囲に設定します。repeat実行されるようにしてください
+execute as @a[x=111,y=222,z=333,dx=11,dy=22,dz=33] run function kcdk:plugin/dmn/flag/a_flag/gate
+execute as @a[x=111,y=222,z=333,dx=11,dy=22,dz=33] run function kcdk:plugin/dmn/flag/b_flag/gate
+execute as @a[x=111,y=222,z=333,dx=11,dy=22,dz=33] run function kcdk:plugin/dmn/flag/c_flag/gate
 function kcdk:plugin/dmn/control
-#--------------------------------------------------------------------------------------------------
 
-#reset
-function kcdk:plugin/dmn/scoreboard/reset
+# ctower:kcdkp.dmn.reset
+# ゲーム開始前に以下のコマンドを実行してください。positioned ~ ~ ~ には各拠点の位置を設定します
+# 「start/end_game」の上に設置するか、「start/end_game」から呼び出すようにすることを推奨します
+function kcdk:plugin/dmn/score/reset
 function kcdk:plugin/dmn/icon/remove
-execute positioned -2025 8 -2528 run function kcdk:plugin/dmn/icon/add/a_flag
-execute positioned -2062 8 -2483 run function kcdk:plugin/dmn/icon/add/b_flag
-execute positioned -2019 13 -2446 run function kcdk:plugin/dmn/icon/add/c_flag
-#--------------------------------------------------------------------------------------------------
+execute positioned ~ ~ ~ run function kcdk:plugin/dmn/icon/add/a_flag
+execute positioned ~ ~ ~ run function kcdk:plugin/dmn/icon/add/b_flag
+execute positioned ~ ~ ~ run function kcdk:plugin/dmn/icon/add/c_flag
 
-#ticket
-function kcdk:plugin/dmn/scoreboard/return/number_of_captured_flags/by_blue
-function kcdk:plugin/dmn/scoreboard/return/number_of_captured_flags/by_green
-function kcdk:plugin/dmn/scoreboard/return/number_of_captured_flags/by_red
-function kcdk:plugin/dmn/scoreboard/return/number_of_captured_flags/by_yellow
-#--------------------------------------------------------------------------------------------------
+# ctower:kcdkp.dmn.ticket
+# repeat実行されるようにしてください。使用しないチームのコマンドを設置する必要はありません
+function kcdk:plugin/dmn/score/return/number_of_captured_flags/by_blue
+function kcdk:plugin/dmn/score/return/number_of_captured_flags/by_green
+function kcdk:plugin/dmn/score/return/number_of_captured_flags/by_red
+function kcdk:plugin/dmn/score/return/number_of_captured_flags/by_yellow
 
-scoreboard players set blue control_point 0
-scoreboard players set red control_point 0
-execute if score captured_a control_point matches 1 run scoreboard players add blue control_point 1
-execute if score captured_b control_point matches 1 run scoreboard players add blue control_point 1
-execute if score captured_c control_point matches 1 run scoreboard players add blue control_point 1
-execute if score captured_a control_point matches 2 run scoreboard players add red control_point 1
-execute if score captured_b control_point matches 2 run scoreboard players add red control_point 1
-execute if score captured_c control_point matches 2 run scoreboard players add red control_point 1
 #--------------------------------------------------------------------------------------------------
 
 execute if score phase control matches 2 run scoreboard players add timer ticket 1

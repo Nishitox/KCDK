@@ -11,4 +11,4 @@ execute positioned ~ ~1 ~-1 if score return kcdk.control matches 6 run clone ~ ~
 execute positioned ~ ~1 ~-1 if score return kcdk.control matches 7 run clone ~ ~ ~ ~ ~6 ~2 ~ ~7 ~ replace normal
 execute positioned ~ ~1 ~-1 if score return kcdk.control matches 8 run clone ~ ~ ~ ~ ~7 ~2 ~ ~8 ~ replace normal
 
-function kcdk:plugin/bm/deploy/root
+setblock ~ ~-1 ~ minecraft:command_block{auto:1b,Command:"function kcdk:plugin/bm/deploy/gate"}

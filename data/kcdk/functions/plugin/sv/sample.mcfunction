@@ -1,12 +1,17 @@
 function kcdk:common/exit
 
 # svの設定サンプルです。本テキストと本拡張機能の「_README.txt」を参考に設定してください
-# ctower:deathは、コマンドタワーの「death」を指します
+# 本テキストの表記「# ctower:death」は、コマンドタワーの「death」を指します
 
 # 忘備録
 # ・サバイバル攻城戦は資材を調達して戦うため、ゲームモードはサバイバルでなければなりません
 # ・経過時間、制限時間は使用しない場合があり、経過時間に関しては手動による無効化が必要な場合があります
 # ・「set deploy」の設定し忘れに注意してください
+
+# setup ※初回時に以下のコマンドを実行してください
+gamerule keepInventory false
+function kcdk:plugin/sv/beacon/setup
+function kcdk:plugin/sv/ticket/setup
 
 #--------------------------------------------------------------------------------------------------
 
@@ -18,6 +23,7 @@ execute if score phase kcdk.control matches 2 as @a[scores={kcdk.death=1..}] run
 execute if score phase kcdk.control matches 2 as @a[scores={kcdk.death=1..}] run function kcdk:plugin/sv/ticket/score/remove
 
 # ctower:victory conditions
+# 以下のコマンドを「victory conditions」に設定してください。使用しないチームの設定はスキップしてください
 execute if score phase kcdk.control matches 2 if score green kcdkp.sv.ticket matches 0 if score red kcdkp.sv.ticket matches 0 if score yellow kcdkp.sv.ticket matches 0 run scoreboard players set victory kcdk.control 1
 execute if score phase kcdk.control matches 2 if score blue kcdkp.sv.ticket matches 0 if score red kcdkp.sv.ticket matches 0 if score yellow kcdkp.sv.ticket matches 0 run scoreboard players set victory kcdk.control 2
 execute if score phase kcdk.control matches 2 if score blue kcdkp.sv.ticket matches 0 if score green kcdkp.sv.ticket matches 0 if score yellow kcdkp.sv.ticket matches 0 run scoreboard players set victory kcdk.control 3
@@ -38,23 +44,19 @@ gamemode survival @a[scores={kcdk.role=0..}]
 # コマンドタワーの追加
 
 # ctower:kcdkp.sv.beacon
-# positioned ~ ~ ~ の座標を各ビーコンの位置に設定します。repeat実行されるようにしてください
+# positioned ~ ~ ~ の座標を各ビーコンの位置に設定します。repeat実行されるようにしてください。使用しないチームの設定はスキップしてください
 execute if score phase kcdk.control matches 2 positioned ~ ~ ~ run function kcdk:plugin/sv/beacon/control/blue
 execute if score phase kcdk.control matches 2 positioned ~ ~ ~ run function kcdk:plugin/sv/beacon/control/green
 execute if score phase kcdk.control matches 2 positioned ~ ~ ~ run function kcdk:plugin/sv/beacon/control/red
 execute if score phase kcdk.control matches 2 positioned ~ ~ ~ run function kcdk:plugin/sv/beacon/control/yellow
 function kcdk:plugin/sv/beacon/bossbar/store
 
-# set ゲーム開始前に以下のコマンドを実行してください。setblock ~ ~ ~ には各ビーコンの位置を設定します
-# 「start/end_game」の上に設置することを推奨します。
+# ctower:kcdkp.sv.set
+# ゲーム開始前に以下のコマンドを実行してください。setblock ~ ~ ~ には各ビーコンの位置を設定します
+# 「start/end_game」の上に設置するか、「start/end_game」から呼び出すようにすることを推奨します
 function kcdk:plugin/sv/beacon/score/set
 function kcdk:plugin/sv/ticket/score/set
 setblock ~ ~ ~ minecraft:beacon
-
-# setup 初回時に以下のコマンドを実行してください
-gamerule keepInventory false
-function kcdk:plugin/sv/beacon/setup
-function kcdk:plugin/sv/ticket/setup
 
 #--------------------------------------------------------------------------------------------------
 
