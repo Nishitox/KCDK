@@ -53,10 +53,10 @@ execute if score phase control matches 3 as @a at @s run playsound minecraft:blo
 setblock ~ ~-1 ~ minecraft:air
 execute if score timer_s control matches 1..59 if score timer_m control matches 1..59 run tellraw @a ["",{"text":"\n"},{"text":"[result]","color":"gray"},{"text":" 残り"},{"score":{"name":"timer_m","objective":"control"}},{"text":"分"},{"score":{"name":"timer_s","objective":"control"}},{"text":"秒でした。\n"}]
 execute if score timer_s control matches 0 if score timer_m control matches 1..59 run tellraw @a ["",{"text":"\n"},{"text":"[result]","color":"gray"},{"text":" 残り"},{"score":{"name":"timer_m","objective":"control"}},{"text":"分でした。\n"}]
-execute unless score timer_t control matches 0 if score timer_s control matches 0..59 if score timer_m control matches 0 run tellraw @a ["",{"text":"\n"},{"text":"[result]","color":"gray"},{"text":" 残り"},{"score":{"name":"timer_s","objective":"control"}},{"text":"秒でした。\n"}]
+execute if score timer_s control matches 1..59 if score timer_m control matches 0 run tellraw @a ["",{"text":"\n"},{"text":"[result]","color":"gray"},{"text":" 残り"},{"score":{"name":"timer_s","objective":"control"}},{"text":"秒でした。\n"}]
 execute if score time_s control matches 1..60 if score time_m control matches 1..60 run tellraw @a ["",{"text":"\n"},{"text":"[result]","color":"gray"},{"text":" 経過時間は"},{"score":{"name":"time_m","objective":"control"}},{"text":"分"},{"score":{"name":"time_s","objective":"control"}},{"text":"秒でした。\n"}]
 execute if score time_s control matches 0 if score time_m control matches 1..60 run tellraw @a ["",{"text":"\n"},{"text":"[result]","color":"gray"},{"text":" 経過時間は"},{"score":{"name":"time_m","objective":"control"}},{"text":"分でした。\n"}]
-execute unless score timer_t control matches 0 if score time_s control matches 1..60 if score time_m control matches 0 run tellraw @a ["",{"text":"\n"},{"text":"[result]","color":"gray"},{"text":" 経過時間は"},{"score":{"name":"time_s","objective":"control"}},{"text":"秒でした。\n"}]
+execute if score time_s control matches 1..60 if score time_m control matches 0 run tellraw @a ["",{"text":"\n"},{"text":"[result]","color":"gray"},{"text":" 経過時間は"},{"score":{"name":"time_s","objective":"control"}},{"text":"秒でした。\n"}]
 ---------------------------------------------------------------------------------------------------
 /[control]
 //[phase]
@@ -111,8 +111,8 @@ execute as @a if score @s death matches 1.. run scoreboard players set @s death 
 execute store result score players control if entity @a
 execute if score phase control matches 0 store result score team_blue control if entity @a[team=blue,gamemode=!spectator]
 execute if score phase control matches 0 store result score team_red control if entity @a[team=red,gamemode=!spectator]
-execute if score phase control matches 1..2 store result score team_blue control if entity @a[team=blue,gamemode=adventure]
-execute if score phase control matches 1..2 store result score team_red control if entity @a[team=red,gamemode=adventure]
+execute if score phase control matches 1..2 store result score team_blue control if entity @a[team=blue,gamemode=!creative,gamemode=!spectator]
+execute if score phase control matches 1..2 store result score team_red control if entity @a[team=red,gamemode=!creative,gamemode=!spectator]
 ---------------------------------------------------------------------------------------------------
 /[title_actionbar]
 execute if score timer_t control matches 0 if score timer_s control matches 0 if score timer_m control matches 0 if score time_t control matches 0 if score time_s control matches 0 if score time_m control matches 0 run title @a actionbar ["",{"text":"("},{"score":{"name":"players","objective":"control"}},{"text":"人が参加中 青チーム:"},{"score":{"name":"team_blue","objective":"control"}},{"text":" 赤チーム:"},{"score":{"name":"team_red","objective":"control"}},{"text":")"}]
@@ -161,8 +161,8 @@ execute if score phase control matches 2 run tp @a[team=red] ~-10 ~-1 ~-4
 /[give_teams]
 setblock ~ ~-1 ~ minecraft:air
 clear @a[team=!]
-replaceitem entity @a[team=blue] armor.chest minecraft:leather_chestplate{Unbreakable:true,display:{color:255},HideFlags:6}
-replaceitem entity @a[team=red] armor.chest minecraft:leather_chestplate{Unbreakable:true,display:{color:16711680},HideFlags:6}
+replaceitem entity @a[team=blue] armor.chest minecraft:leather_chestplate{Unbreakable:true,Enchantments:[{id:"minecraft:binding_curse",lvl:1s}],display:{color:255f},HideFlags:7}
+replaceitem entity @a[team=red] armor.chest minecraft:leather_chestplate{Unbreakable:true,Enchantments:[{id:"minecraft:binding_curse",lvl:1s}],display:{color:16711680f},HideFlags:7}
 give @a[team=!] minecraft:stone_sword
 give @a[team=!] minecraft:bow
 give @a[team=!] minecraft:cooked_beef 64
