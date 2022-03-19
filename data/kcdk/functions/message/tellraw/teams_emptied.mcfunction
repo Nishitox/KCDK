@@ -1,1 +1,0 @@
-tellraw @s ["",{"text":"[kcdk:log]","color":"gray"},{"text":" チームを空にしました。"}]

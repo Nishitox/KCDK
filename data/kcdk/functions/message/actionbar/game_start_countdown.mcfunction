@@ -1,0 +1,1 @@
+execute if score timer_s kcdk.control matches 0..59 run title @s actionbar ["",{"score":{"name":"timer_s","objective":"kcdk.control"}},{"text":"秒後にゲームを開始します"}]

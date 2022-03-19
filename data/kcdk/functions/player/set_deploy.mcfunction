@@ -1,0 +1,2 @@
+function kcdk:player/set_spawnpoint
+function kcdk:player/set_position

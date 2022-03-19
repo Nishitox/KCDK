@@ -1,0 +1,1 @@
+tellraw @s ["",{"text":"\n[kcdk:announce] ","color":"gray"},{"text":"緑チームの勝利\n"}]

@@ -1,0 +1,9 @@
+gamerule commandBlockOutput false
+gamerule doDaylightCycle false
+gamerule doFireTick false
+gamerule doMobSpawning false
+gamerule doWeatherCycle false
+gamerule keepInventory true
+gamerule maxEntityCramming 0
+gamerule mobGriefing false
+gamerule spawnRadius 0

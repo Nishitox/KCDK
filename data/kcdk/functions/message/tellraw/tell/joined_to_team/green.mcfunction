@@ -1,0 +1,1 @@
+tellraw @s ["",{"text":"\n[kcdk:tell] ","color":"gray"},{"text":"緑チームに参加しました。\n"}]

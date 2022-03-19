@@ -1,1 +1,0 @@
-summon falling_block ~ ~ ~ {BlockState:{Name:"minecraft:command_block",Properties:{facing:"up"}},TileEntityData:{Command:""},Time:1}

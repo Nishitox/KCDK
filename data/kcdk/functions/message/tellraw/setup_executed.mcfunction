@@ -1,1 +1,0 @@
-tellraw @s ["",{"text":"[kcdk:log]","color":"gray"},{"text":" セットアップを実行しました。セットアップの詳細は\n"},{"text":"datapacks:kojosen command development kit/data/kcdk/functions/setup","color":"yellow"},{"text":" から確認してください。"}]
