@@ -79,9 +79,9 @@ execute if score phase control matches 2 unless score victory control matches 0 
 execute if score phase control matches 2 unless score victory control matches 0 run setblock ~-6 ~-9 ~ minecraft:redstone_block
 ---------------------------------------------------------------------------------------------------
 /[victory conditions]
-[blue trigger]
+[blue victory]
 execute if score phase control matches 2 
-[red trigger]
+[red victory]
 execute if score phase control matches 2 
 ---------------------------------------------------------------------------------------------------
 /[timer]
@@ -102,10 +102,10 @@ execute if score time_t control matches 20 if score time_s control matches 0..59
 ---------------------------------------------------------------------------------------------------
 /[death]
 [spectate blue]
-execute if score phase control matches 2 as @a[team=blue] if score @s death matches 1.. run gamemode spectator @s
+execute if score phase control matches 2 as @a[team=blue,scores={death=1..}] run gamemode spectator @s
 [spectate red]
-execute if score phase control matches 2 as @a[team=red] if score @s death matches 1.. run gamemode spectator @s
-execute as @a if score @s death matches 1.. run scoreboard players set @s death 0
+execute if score phase control matches 2 as @a[team=red,scores={death=1..}] run gamemode spectator @s
+execute as @a[scores={death=1..}] run scoreboard players set @s death 0
 ---------------------------------------------------------------------------------------------------
 /[store score]
 execute store result score players control if entity @a
@@ -126,57 +126,66 @@ execute if score phase control matches 2 if score time_s control matches 1..60 i
 ---------------------------------------------------------------------------------------------------
 /[set players]
 setblock ~ ~-1 ~ minecraft:air
-execute if score phase control matches 0 run clear @a[team=!]
-execute if score phase control matches 0 run give @a[team=!] minecraft:cooked_beef 64
-//[set gamemode]
-setblock ~2 ~-4 ~ minecraft:redstone_block
+//[set role]
+setblock ~2 ~-2 ~ minecraft:redstone_block
+//[set general settings]
+setblock ~4 ~-3 ~ minecraft:redstone_block
 //[set spawnpoint]
-setblock ~4 ~-5 ~ minecraft:redstone_block
+setblock ~6 ~-4 ~ minecraft:redstone_block
 //[set deploy]
-setblock ~6 ~-6 ~ minecraft:redstone_block
+setblock ~8 ~-5 ~ minecraft:redstone_block
 //[set items]
-execute if score phase control matches 2 run setblock ~8 ~-7 ~ minecraft:redstone_block
+execute if score phase control matches 2 run setblock ~10 ~-6 ~ minecraft:redstone_block
 //[set effects]
-setblock ~10 ~-8 ~ minecraft:redstone_block
+setblock ~12 ~-7 ~ minecraft:redstone_block
 ---------------------------------------------------------------------------------------------------
-/[set gamemode]
+/[set role]
 setblock ~ ~-1 ~ minecraft:air
-gamemode adventure @a[team=blue]
-gamemode adventure @a[team=red]
+scoreboard objectives remove role
+scoreboard objectives add role dummy
+scoreboard players set @a[team=blue] role 0
+scoreboard players set @a[team=red] role 0
+---------------------------------------------------------------------------------------------------
+/[set general settings]
+setblock ~ ~-1 ~ minecraft:air
+gamemode adventure @a[scores={role=0..}]
+execute if score phase control matches 0 run clear @a[scores={role=0..}]
+execute if score phase control matches 0 run give @a[scores={role=0..}] minecraft:cooked_beef 64
 ---------------------------------------------------------------------------------------------------
 /[set spawnpoint]
 setblock ~ ~-1 ~ minecraft:air
-execute if score phase control matches 0 run spawnpoint @a[team=blue] ~-8 ~-2 ~-4
-execute if score phase control matches 0 run spawnpoint @a[team=red] ~-8 ~1 ~-4
-execute if score phase control matches 2 run spawnpoint @a[team=blue] ~-8 ~-4 ~-4
-execute if score phase control matches 2 run spawnpoint @a[team=red] ~-8 ~-1 ~-4
+execute if score phase control matches 0 run spawnpoint @a[team=blue] ~-10 ~-2 ~-4
+execute if score phase control matches 0 run spawnpoint @a[team=red] ~-10 ~1 ~-4
+execute if score phase control matches 2 run spawnpoint @a[team=blue] ~-10 ~-4 ~-4
+execute if score phase control matches 2 run spawnpoint @a[team=red] ~-10 ~-1 ~-4
 ---------------------------------------------------------------------------------------------------
 /[set deploy]
 setblock ~ ~-1 ~ minecraft:air
-execute if score phase control matches 0 run tp @a[team=blue] ~-10 ~-2 ~-4
-execute if score phase control matches 0 run tp @a[team=red] ~-10 ~1 ~-4
-execute if score phase control matches 2 run tp @a[team=blue] ~-10 ~-4 ~-4
-execute if score phase control matches 2 run tp @a[team=red] ~-10 ~-1 ~-4
+execute if score phase control matches 0 run tp @a[team=blue] ~-12 ~-2 ~-4
+execute if score phase control matches 0 run tp @a[team=red] ~-12 ~1 ~-4
+execute if score phase control matches 2 run tp @a[team=blue] ~-12 ~-4 ~-4
+execute if score phase control matches 2 run tp @a[team=red] ~-12 ~-1 ~-4
 ---------------------------------------------------------------------------------------------------
 /[set items]
 setblock ~ ~-1 ~ minecraft:air
-clear @a[team=!]
+clear @a[scores={role=0..}]
 replaceitem entity @a[team=blue] armor.chest minecraft:leather_chestplate{Unbreakable:true,Enchantments:[{id:"minecraft:binding_curse",lvl:1s}],display:{color:255f},HideFlags:7}
 replaceitem entity @a[team=red] armor.chest minecraft:leather_chestplate{Unbreakable:true,Enchantments:[{id:"minecraft:binding_curse",lvl:1s}],display:{color:16711680f},HideFlags:7}
-give @a[team=!] minecraft:stone_sword
-give @a[team=!] minecraft:bow
-give @a[team=!] minecraft:cooked_beef 64
-give @a[team=!] minecraft:arrow 64
+give @a[scores={role=0..}] minecraft:stone_sword
+give @a[scores={role=0..}] minecraft:bow
+give @a[scores={role=0..}] minecraft:cooked_beef 64
+give @a[scores={role=0..}] minecraft:arrow 64
 ---------------------------------------------------------------------------------------------------
 /[set effects]
 setblock ~ ~-1 ~ minecraft:air
-effect clear @a[team=!]
-execute if score phase control matches 3 run effect give @a[team=!] minecraft:resistance 100000 4 true
-execute if score phase control matches 3 run effect give @a[team=!] minecraft:saturation 100000 4 true
-execute if score phase control matches 3 run effect give @a[team=!] minecraft:weakness 100000 4 true
+effect clear @a[scores={role=0..}]
+execute if score phase control matches 3 run effect give @a[scores={role=0..}] minecraft:resistance 120 4 true
+execute if score phase control matches 3 run effect give @a[scores={role=0..}] minecraft:saturation 120 4 true
+execute if score phase control matches 3 run effect give @a[scores={role=0..}] minecraft:weakness 120 4 true
 ---------------------------------------------------------------------------------------------------
 /[team assignment]
 setblock ~ ~1 ~ minecraft:redstone_block
+
 execute unless entity @a[team=] run setblock ~ ~-1 ~ minecraft:air
 execute store result score team_blue control if entity @a[team=blue]
 execute store result score team_red control if entity @a[team=red]
@@ -187,6 +196,9 @@ execute store result score team_red control if entity @a[team=red]
 title @a times 0 80 20
 title @a title ["",{"score":{"name":"team_blue","objective":"control"},"color":"blue"},{"text":" - "},{"score":{"name":"team_red","objective":"control"},"color":"red"}]
 ---------------------------------------------------------------------------------------------------
+/[empty teams]
+team empty blue
+team empty red
 /[change teams]
 team empty blue
 team join blue @a[team=red]
@@ -195,10 +207,6 @@ execute store result score team_blue control if entity @a[team=blue]
 execute store result score team_red control if entity @a[team=red]
 title @a times 0 80 20
 title @a title ["",{"score":{"name":"team_blue","objective":"control"},"color":"blue"},{"text":" - "},{"score":{"name":"team_red","objective":"control"},"color":"red"}]
----------------------------------------------------------------------------------------------------
-/[empty teams]
-team empty blue
-team empty red
 ---------------------------------------------------------------------------------------------------
 [trigger kill general]
 execute if score phase control matches 2 if entity @a[name=,gamemode=spectator] run scoreboard players set victory control 0
@@ -209,5 +217,7 @@ execute if score phase control matches 2 if score timer_t control matches 0 if s
 [trigger destroy beacon]
 execute if score phase control matches 2 unless block ~ ~ ~ minecraft:beacon run scoreboard players set victory control 0
 [give wooden_pickaxe]
-give @a[team=!] minecraft:wooden_pickaxe{Unbreakable:true,HideFlags:6,CanDestroy:[beacon]}
+give @a[scores={role=0..}] minecraft:wooden_pickaxe{Unbreakable:true,HideFlags:6,CanDestroy:[beacon]}
+/[remove kit]
+data merge block ~ ~ ~1 {Text1:"{\"text\":\"\",\"clickEvent\":{\"action\":\"run_command\",\"value\":\"fill ~-29 ~-9 ~-6 ~1 ~4 ~ minecraft:air\"}}",Text2:"{\"text\":\"click to remove\",\"clickEvent\":{\"action\":\"run_command\",\"value\":\"execute positioned ~-29.5 ~-9.5 ~-6.5 run kill @e[type=item,dx=30,dy=13,dz=6]\"}}"}
 ---------------------------------------------------------------------------------------------------
