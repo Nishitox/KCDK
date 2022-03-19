@@ -1,12 +1,12 @@
-﻿/[start/end_game]
+﻿/[start/end game]
 //[phase]
 execute if score phase control matches 0 run setblock ~4 ~-1 ~ minecraft:redstone_block
-//[set_timer]
+//[set timer]
 execute if score phase control matches 0 run setblock ~2 ~-2 ~ minecraft:redstone_block
-//[reset_score]
+//[reset score]
 execute unless score phase control matches 0 run setblock ~6 ~-3 ~ minecraft:redstone_block
 ---------------------------------------------------------------------------------------------------
-/[set_timer]
+/[set timer]
 setblock ~ ~-1 ~ minecraft:air
 scoreboard players set timer_t control 20
 execute if score phase control matches 1 run scoreboard players set timer_s control 10
@@ -22,7 +22,7 @@ execute if score phase control matches 2 run scoreboard players set phase contro
 execute if score phase control matches 1 run scoreboard players set phase control 2
 execute if score phase control matches 0 run scoreboard players set phase control 1
 ---------------------------------------------------------------------------------------------------
-/[reset_score]
+/[reset score]
 setblock ~ ~-1 ~ minecraft:air
 scoreboard players set phase control 0
 scoreboard players set time_m control 0
@@ -33,7 +33,7 @@ scoreboard players set timer_s control 0
 scoreboard players set timer_t control 0
 scoreboard players set victory control 0
 ---------------------------------------------------------------------------------------------------
-/[announce_start/end]
+/[announce start/end]
 setblock ~ ~-1 ~ minecraft:air
 title @a times 0 80 20
 execute if score phase control matches 2 run title @a title {"text":""}
@@ -41,11 +41,11 @@ execute if score phase control matches 2 run title @a subtitle {"text":"試合�
 execute if score phase control matches 2 as @a at @s run playsound minecraft:block.anvil.place master @s ~ ~ ~ 10 1.7
 execute if score phase control matches 3 if score victory control matches 1 run tellraw @a ["",{"text":"\n"},{"text":"[result]","color":"gray"},{"text":" 青チームの勝利\n"}]
 execute if score phase control matches 3 if score victory control matches 1 run title @a title {"text":"青チームの勝利","color":"blue"}
-[blue_subtitle]
+[blue subtitle]
 execute if score phase control matches 3 if score victory control matches 1 run title @a subtitle {"text":""}
 execute if score phase control matches 3 if score victory control matches 2 run tellraw @a ["",{"text":"\n"},{"text":"[result]","color":"gray"},{"text":" 赤チームの勝利\n"}]
 execute if score phase control matches 3 if score victory control matches 2 run title @a title {"text":"赤チームの勝利","color":"red"}
-[red_subtitle]
+[red subtitle]
 execute if score phase control matches 3 if score victory control matches 2 run title @a subtitle {"text":""}
 execute if score phase control matches 3 as @a at @s run playsound minecraft:block.anvil.use master @s ~ ~ ~ 10 0.9
 ---------------------------------------------------------------------------------------------------
@@ -61,27 +61,27 @@ execute if score time_s control matches 1..60 if score time_m control matches 0 
 /[control]
 //[phase]
 execute if score phase control matches 1 if score timer_t control matches 0 if score timer_s control matches 0 if score timer_m control matches 0 run setblock ~-8 ~-1 ~ minecraft:redstone_block
-//[announce_start/end]
+//[announce start/end]
 execute if score phase control matches 1 if score timer_t control matches 0 if score timer_s control matches 0 if score timer_m control matches 0 run setblock ~-4 ~-2 ~ minecraft:redstone_block
-//[set_timer]
+//[set timer]
 execute if score phase control matches 1 if score timer_t control matches 0 if score timer_s control matches 0 if score timer_m control matches 0 run setblock ~-10 ~-3 ~ minecraft:redstone_block
-//[set_players]
+//[set players]
 execute if score phase control matches 1 if score timer_t control matches 0 if score timer_s control matches 0 if score timer_m control matches 0 run setblock ~-12 ~-4 ~4 minecraft:redstone_block
 //[phase]
 execute if score phase control matches 2 unless score victory control matches 0 run setblock ~-8 ~-5 ~ minecraft:redstone_block
-//[announce_start/end]
+//[announce start/end]
 execute if score phase control matches 2 unless score victory control matches 0 run setblock ~-4 ~-6 ~ minecraft:redstone_block
 //[result]
 execute if score phase control matches 2 unless score victory control matches 0 run setblock ~-2 ~-7 ~ minecraft:redstone_block
-//[effect_teams]
+//[set effects]
 execute if score phase control matches 2 unless score victory control matches 0 run setblock ~-2 ~-8 ~4 minecraft:redstone_block
-//[reset_score]
+//[reset score]
 execute if score phase control matches 2 unless score victory control matches 0 run setblock ~-6 ~-9 ~ minecraft:redstone_block
 ---------------------------------------------------------------------------------------------------
-/[victory_trigger]
-[blue_trigger]
+/[victory conditions]
+[blue trigger]
 execute if score phase control matches 2 
-[red_trigger]
+[red trigger]
 execute if score phase control matches 2 
 ---------------------------------------------------------------------------------------------------
 /[timer]
@@ -101,20 +101,20 @@ execute if score time_t control matches 20 if score time_s control matches 0 if 
 execute if score time_t control matches 20 if score time_s control matches 0..59 if score time_m control matches 0..60 run scoreboard players set time_t control 0
 ---------------------------------------------------------------------------------------------------
 /[death]
-[spectator_blue]
+[spectate blue]
 execute if score phase control matches 2 as @a[team=blue] if score @s death matches 1.. run gamemode spectator @s
-[spectator_red]
+[spectate red]
 execute if score phase control matches 2 as @a[team=red] if score @s death matches 1.. run gamemode spectator @s
 execute as @a if score @s death matches 1.. run scoreboard players set @s death 0
 ---------------------------------------------------------------------------------------------------
-/[store_score]
+/[store score]
 execute store result score players control if entity @a
 execute if score phase control matches 0 store result score team_blue control if entity @a[team=blue,gamemode=!spectator]
 execute if score phase control matches 0 store result score team_red control if entity @a[team=red,gamemode=!spectator]
 execute if score phase control matches 1..2 store result score team_blue control if entity @a[team=blue,gamemode=!creative,gamemode=!spectator]
 execute if score phase control matches 1..2 store result score team_red control if entity @a[team=red,gamemode=!creative,gamemode=!spectator]
 ---------------------------------------------------------------------------------------------------
-/[title_actionbar]
+/[title actionbar]
 execute if score timer_t control matches 0 if score timer_s control matches 0 if score timer_m control matches 0 if score time_t control matches 0 if score time_s control matches 0 if score time_m control matches 0 run title @a actionbar ["",{"text":"("},{"score":{"name":"players","objective":"control"}},{"text":"人が参加中 青チーム:"},{"score":{"name":"team_blue","objective":"control"}},{"text":" 赤チーム:"},{"score":{"name":"team_red","objective":"control"}},{"text":")"}]
 execute if score phase control matches 1 if score timer_s control matches 1..59 run title @a actionbar ["",{"text":"("},{"score":{"name":"timer_s","objective":"control"}},{"text":"秒後にゲームを開始します)"}]
 execute if score phase control matches 2 if score timer_s control matches 1..59 if score timer_m control matches 1..59 run title @a actionbar ["",{"text":"("},{"score":{"name":"players","objective":"control"}},{"text":"人が参加中 青チーム:"},{"score":{"name":"team_blue","objective":"control"}},{"text":" 赤チーム:"},{"score":{"name":"team_red","objective":"control"}},{"text":" 残り"},{"score":{"name":"timer_m","objective":"control"}},{"text":"分"},{"score":{"name":"timer_s","objective":"control"}},{"text":"秒)"}]
@@ -124,41 +124,41 @@ execute if score phase control matches 2 if score time_s control matches 1..60 i
 execute if score phase control matches 2 if score time_s control matches 0 if score time_m control matches 1..60 run title @a actionbar ["",{"text":"("},{"score":{"name":"players","objective":"control"}},{"text":"人が参加中 青チーム:"},{"score":{"name":"team_blue","objective":"control"}},{"text":" 赤チーム:"},{"score":{"name":"team_red","objective":"control"}},{"text":" 経過時間:"},{"score":{"name":"time_m","objective":"control"}},{"text":"分)"}]
 execute if score phase control matches 2 if score time_s control matches 1..60 if score time_m control matches 0 run title @a actionbar ["",{"text":"("},{"score":{"name":"players","objective":"control"}},{"text":"人が参加中 青チーム:"},{"score":{"name":"team_blue","objective":"control"}},{"text":" 赤チーム:"},{"score":{"name":"team_red","objective":"control"}},{"text":" 経過時間:"},{"score":{"name":"time_s","objective":"control"}},{"text":"秒)"}]
 ---------------------------------------------------------------------------------------------------
-/[set_players]
+/[set players]
 setblock ~ ~-1 ~ minecraft:air
 execute if score phase control matches 0 run clear @a[team=!]
 execute if score phase control matches 0 run give @a[team=!] minecraft:cooked_beef 64
-//[gamemode_teams]
+//[set gamemode]
 setblock ~2 ~-4 ~ minecraft:redstone_block
-//[spawnpoint_teams]
+//[set spawnpoint]
 setblock ~4 ~-5 ~ minecraft:redstone_block
-//[tp_teams]
+//[set deploy]
 setblock ~6 ~-6 ~ minecraft:redstone_block
-//[give_teams]
+//[set items]
 execute if score phase control matches 2 run setblock ~8 ~-7 ~ minecraft:redstone_block
-//[effect_teams]
-execute if score phase control matches 2 run setblock ~10 ~-8 ~ minecraft:redstone_block
+//[set effects]
+setblock ~10 ~-8 ~ minecraft:redstone_block
 ---------------------------------------------------------------------------------------------------
-/[gamemode_teams]
+/[set gamemode]
 setblock ~ ~-1 ~ minecraft:air
 gamemode adventure @a[team=blue]
 gamemode adventure @a[team=red]
 ---------------------------------------------------------------------------------------------------
-/[spawnpoint_teams]
+/[set spawnpoint]
 setblock ~ ~-1 ~ minecraft:air
 execute if score phase control matches 0 run spawnpoint @a[team=blue] ~-8 ~-2 ~-4
 execute if score phase control matches 0 run spawnpoint @a[team=red] ~-8 ~1 ~-4
 execute if score phase control matches 2 run spawnpoint @a[team=blue] ~-8 ~-4 ~-4
 execute if score phase control matches 2 run spawnpoint @a[team=red] ~-8 ~-1 ~-4
 ---------------------------------------------------------------------------------------------------
-/[tp_teams]
+/[set deploy]
 setblock ~ ~-1 ~ minecraft:air
 execute if score phase control matches 0 run tp @a[team=blue] ~-10 ~-2 ~-4
 execute if score phase control matches 0 run tp @a[team=red] ~-10 ~1 ~-4
 execute if score phase control matches 2 run tp @a[team=blue] ~-10 ~-4 ~-4
 execute if score phase control matches 2 run tp @a[team=red] ~-10 ~-1 ~-4
 ---------------------------------------------------------------------------------------------------
-/[give_teams]
+/[set items]
 setblock ~ ~-1 ~ minecraft:air
 clear @a[team=!]
 replaceitem entity @a[team=blue] armor.chest minecraft:leather_chestplate{Unbreakable:true,Enchantments:[{id:"minecraft:binding_curse",lvl:1s}],display:{color:255f},HideFlags:7}
@@ -168,14 +168,14 @@ give @a[team=!] minecraft:bow
 give @a[team=!] minecraft:cooked_beef 64
 give @a[team=!] minecraft:arrow 64
 ---------------------------------------------------------------------------------------------------
-/[effect_teams]
+/[set effects]
 setblock ~ ~-1 ~ minecraft:air
 effect clear @a[team=!]
 execute if score phase control matches 3 run effect give @a[team=!] minecraft:resistance 100000 4 true
 execute if score phase control matches 3 run effect give @a[team=!] minecraft:saturation 100000 4 true
 execute if score phase control matches 3 run effect give @a[team=!] minecraft:weakness 100000 4 true
 ---------------------------------------------------------------------------------------------------
-/[join_team]
+/[team assignment]
 setblock ~ ~1 ~ minecraft:redstone_block
 execute unless entity @a[team=] run setblock ~ ~-1 ~ minecraft:air
 execute store result score team_blue control if entity @a[team=blue]
@@ -187,7 +187,7 @@ execute store result score team_red control if entity @a[team=red]
 title @a times 0 80 20
 title @a title ["",{"score":{"name":"team_blue","objective":"control"},"color":"blue"},{"text":" - "},{"score":{"name":"team_red","objective":"control"},"color":"red"}]
 ---------------------------------------------------------------------------------------------------
-/[change_team]
+/[change teams]
 team empty blue
 team join blue @a[team=red]
 team join red @a[team=]
@@ -196,18 +196,18 @@ execute store result score team_red control if entity @a[team=red]
 title @a times 0 80 20
 title @a title ["",{"score":{"name":"team_blue","objective":"control"},"color":"blue"},{"text":" - "},{"score":{"name":"team_red","objective":"control"},"color":"red"}]
 ---------------------------------------------------------------------------------------------------
-/[empty_teams]
+/[empty teams]
 team empty blue
 team empty red
 ---------------------------------------------------------------------------------------------------
-[trigger_death_player]
+[trigger kill general]
 execute if score phase control matches 2 if entity @a[name=,gamemode=spectator] run scoreboard players set victory control 0
-[trigger_annihilation]
+[trigger annihilation]
 execute if score phase control matches 2 if score team_ control matches 0 run scoreboard players set victory control 0
-[trigger_time_out]
+[trigger time limit]
 execute if score phase control matches 2 if score timer_t control matches 0 if score timer_s control matches 0 if score timer_m control matches 0 run scoreboard players set victory control 0
-[trigger_destroy_beacon]
+[trigger destroy beacon]
 execute if score phase control matches 2 unless block ~ ~ ~ minecraft:beacon run scoreboard players set victory control 0
-[give_wooden_pickaxe]
+[give wooden_pickaxe]
 give @a[team=!] minecraft:wooden_pickaxe{Unbreakable:true,HideFlags:6,CanDestroy:[beacon]}
 ---------------------------------------------------------------------------------------------------

@@ -1,8 +1,8 @@
-kojosen_command_development_kit_1.0.2.nbt を以下の場所に入れてください。
+kojosen_command_development_kit_1.0.3.nbt を以下の場所に入れてください。
 saves:[ワールド名]/generated/[名前空間]/structures/
 
 /give @s minecraft:structure_block でストラクチャーブロックを入手します。
-ロード画面でストラクチャー名に kojosen_command_development_kit_1.0.2 と入力して読み込みます。
+ロード画面でストラクチャー名に kojosen_command_development_kit_1.0.3 と入力して読み込みます。
 ---------------------------------------------------------------------------------------------------
 以下のコマンドを実行してください。
 scoreboard objectives add death deathCount
