@@ -1,0 +1,1 @@
+tellraw @s ["",{"text":"[kcdk:error]","color":"gray"},{"text":" チームが選択されていません。"}]
