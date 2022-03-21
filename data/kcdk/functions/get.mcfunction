@@ -1,0 +1,1 @@
+give @s minecraft:structure_block{display:{Name:"{\"text\":\"KCDK 1.1.0\"}"},BlockEntityTag:{name:"kcdk:1.1.0",posX:0,posY:1,posZ:0,sizeX:31,sizeY:14,sizeZ:7,mode:"LOAD"}}
