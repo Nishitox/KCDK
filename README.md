@@ -39,7 +39,7 @@
 
 * KCDK a10, b10, c10 - Minecraft 1.12以前に対応したKCDK 1.0の機能縮小版：  
   * KCDK a10：Minecraft 1.12対応。一部機能をFunction化しています。
-  * KCDK b10：Minecraft 1.11対応。KCDK a10の機能縮小版です。
+  * KCDK b10：Minecraft 1.11対応。KCDK a10の改変版です。
   * KCDK c10：Minecraft 1.10対応。KCDK b10の機能縮小版です。
 
 ---
