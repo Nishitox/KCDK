@@ -17,7 +17,7 @@
 
 | KCDK\MC  | ~1.17 | 1.16  | 1.15  | 1.14  | 1.13  | 1.12  | 1.11  | 1.10  | 1.9~  |
 | :------: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-| KCDK b10 |   ❌   |   ❌   |   ❌   |   ❌   |   ❌   |   ✔   |   ✔   |   ❌   |   ❌   |
+| KCDK c10 |   ❌   |   ❌   |   ❌   |   ❌   |   ❌   |   ✔   |   ✔   |   ✔   |   ❌   |
 
 * 本体（KCDKの構造物）の動作に影響が出るバージョンは「❌」と表記しています。それ以外の拡張機能等に影響が出るバージョンには「△」を、それら以外を「✔」と表記しています。
 
@@ -29,21 +29,21 @@
 
 # このバージョンの説明
 
-* KCDK b10 - Minecraft 1.11対応版：  
-  KCDK a10の改変版です。
+* KCDK c10 - Minecraft 1.10対応版：  
+  KCDK b10の機能縮小版です。
 
 ---
 
-# リリース b100
+# リリース c100
 
-* KCDKをMinecraft 1.11で正式に利用できます！
+* KCDKをMinecraft 1.10で正式に利用できます！
 * スコアボードオブジェクトの名称変更：
   * control: players -> kcdk.players: everyone
     * control: team_blue -> kcdk.players: blue
     * control: team_red -> kcdk.players: red
   * control -> kcdk.control
-  * death -> kcdk.death
-  * role -> kcdk.role
+  * death -> kcdk_death
+  * role -> kcdk_role
 * ドキュメントの追加及び更新。
 * 本体の看板表記の追加及び修正。
 
