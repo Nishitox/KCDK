@@ -2,8 +2,6 @@
 
 KCDK開発者用の忘備録&情報共有テキストです。導入方法や使い方は同ディレクトリの「_README.pdf」を参照ください。
 
-[TOC]
-
 # KCDKの命名規則
 
 * KCDKで使われるファイル名および変数名の単語の区切りには、空白の代わりにスネークケースを使用します。　例：hoge_piyo.mcfunction
@@ -34,22 +32,8 @@ KCDK開発者用の忘備録&情報共有テキストです。導入方法や使
 
 # KCDKの更新毎に変更が必要な個所
 
-* `data/kcdk/functions/get.mcfunction`
-  line 1, col 62: ストラクチャー名を最新のバージョン名に変更してください。
+* 本データパックをVSCodeなどのテキストエディタでワークスペースとして開き、検索で`@ANCHOR: KCDK-VERSION`と入力し、該当するファイル内に記述されているバージョン名を最新に変更してください。
 
-* `data/kcdk/functions/message/tellraw/announce/setup_executed.mcfunction`
-  line 1, col 118: ファイルパスの部分を最新のバージョンに合うように変更してください。
+* `data/kcdk/functions/plugin/kcdkm/reply/<version-name>.mcfunction`及び`data/kcdk/structures:<version-name>.nbt`のファイル名を最新のバージョン名に変更してください。
 
-* `data/kcdk/functions/message/tellraw/announce/simplified_setup_executed.mcfunction`
-  line 1, col 120: ファイルパスの部分を最新のバージョンに合うように変更してください。
-
-* `data/kcdk/functions/plugin/igui/page/top/fill_icon/21b_kcdk.mcfunction`
-  line 1, col 89: ストラクチャー名を最新のバージョン名に変更してください。
-
-* `data/kcdk/functions/plugin/kcdkm/reply/<version-name>.mcfunction`
-  ファイル名を最新のバージョン名に変更してください。
-  line 1, col 24: 変数名を最新のバージョン名に変更してください。
-
-* `data/kcdk/structures:<version-name>.nbt`
-ファイル名を最新のバージョン名に変更してください。
-KCDK本体の看板に記されているバージョン名を最新のものに変更してください。
+* KCDK本体の看板に記されているバージョン名を最新に変更してください。
