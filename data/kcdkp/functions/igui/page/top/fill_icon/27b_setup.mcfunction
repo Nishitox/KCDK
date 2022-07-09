@@ -1,1 +1,1 @@
-replaceitem entity @s inventory.18 minecraft:stone_pickaxe{display:{Name:"{\"text\":\"設定の初期化\"}",Lore:["{\"text\":\"簡易セットアップを実行します\",\"color\":\"dark_gray\"}"]},HideFlags:2}
+replaceitem entity @s inventory.18 minecraft:stone_pickaxe{display:{Name:'{"text":"設定の初期化"}',Lore:['{"text":"簡易セットアップを実行します","color":"dark_gray"}']},HideFlags:2}

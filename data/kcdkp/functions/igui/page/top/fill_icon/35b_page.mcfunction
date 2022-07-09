@@ -1,1 +1,1 @@
-replaceitem entity @s inventory.26 minecraft:paper{display:{Name:"{\"text\":\"kcdkp.igui.top\"}"}}
+replaceitem entity @s inventory.26 minecraft:paper{display:{Name:'{"text":"kcdkp.igui.top"}'}}

@@ -1,1 +1,1 @@
-replaceitem entity @s inventory.5 minecraft:stone_pickaxe{display:{Name:"{\"text\":\"プラグインの初期化\"}",Lore:["{\"text\":\"プラグインのセットアップを実行します\",\"color\":\"dark_gray\"}"]},HideFlags:2}
+replaceitem entity @s inventory.5 minecraft:stone_pickaxe{display:{Name:'{"text":"プラグインの初期化"}',Lore:['{"text":"プラグインのセットアップを実行します","color":"dark_gray"}']},HideFlags:2}

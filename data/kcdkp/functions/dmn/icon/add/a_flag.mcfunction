@@ -1,1 +1,1 @@
-summon minecraft:falling_block ~ ~ ~ {BlockState:{Name:"minecraft:white_stained_glass"},Tags:[kcdkp.dmn.a_flag],CustomName:"{\"text\":\"[ A ]\"}",CustomNameVisible:true,Time:1,NoGravity:true,Glowing:true}
+summon minecraft:falling_block ~ ~ ~ {BlockState:{Name:"minecraft:white_stained_glass"},Tags:[kcdkp.dmn.a_flag],CustomName:'{"text":"[ A ]"}',CustomNameVisible:true,Time:1,NoGravity:true,Glowing:true}

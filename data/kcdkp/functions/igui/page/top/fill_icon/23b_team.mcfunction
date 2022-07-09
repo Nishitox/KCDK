@@ -1,1 +1,1 @@
-replaceitem entity @s inventory.14 minecraft:leather_helmet{display:{Name:"{\"text\":\"チームの操作...\"}"},HideFlags:2}
+replaceitem entity @s inventory.14 minecraft:leather_helmet{display:{Name:'{"text":"チームの操作..."}'},HideFlags:2}

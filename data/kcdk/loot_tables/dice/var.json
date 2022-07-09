@@ -10,7 +10,7 @@
                     "functions": [
                         {
                             "function": "minecraft:set_nbt",
-                            "tag": "{display:{Name:\"{\\\"text\\\":\\\"kcdk.dice\\\"}\"}}"
+                            "tag": "{display:{Name:'{\"text\":\"kcdk.dice\"}'}}"
                         }
                     ]
                 }

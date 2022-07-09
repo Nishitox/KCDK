@@ -1,1 +1,1 @@
-replaceitem entity @s inventory.17 minecraft:arrow{display:{Name:"{\"text\":\"戻る\"}"}}
+replaceitem entity @s inventory.17 minecraft:arrow{display:{Name:'{"text":"戻る"}'}}

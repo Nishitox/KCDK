@@ -1,1 +1,1 @@
-replaceitem entity @s inventory.13 minecraft:book{display:{Name:"{\"text\":\"ファイル...\"}"}}
+replaceitem entity @s inventory.13 minecraft:book{display:{Name:'{"text":"ファイル..."}'}}
