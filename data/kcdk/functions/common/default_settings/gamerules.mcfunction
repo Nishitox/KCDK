@@ -22,6 +22,6 @@ gamerule showDeathMessages true
 gamerule spawnRadius 10
 gamerule spectatorsGenerateChunks true
 
-execute if score version kcdk.control matches 14.. run function kcdk:common/default_settings/gamerules_14
-execute if score version kcdk.control matches 15.. run function kcdk:common/default_settings/gamerules_15
-execute if score version kcdk.control matches 16.. run function kcdk:common/default_settings/gamerules_16
+execute if score version kcdk.control matches 14.. run function kcdk:common/default_settings/gamerules_1.14
+execute if score version kcdk.control matches 15.. run function kcdk:common/default_settings/gamerules_1.15
+execute if score version kcdk.control matches 16.. run function kcdk:common/default_settings/gamerules_1.16
