@@ -20,6 +20,6 @@
         }
     },
     "rewards": {
-        "function": "kcdk:plugin/ke/gate_1"
+        "function": "kcdkp:ke/gate_1"
     }
 }

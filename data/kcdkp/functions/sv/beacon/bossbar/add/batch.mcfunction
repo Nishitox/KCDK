@@ -1,4 +1,4 @@
-function kcdk:plugin/sv/beacon/bossbar/add/blue
-function kcdk:plugin/sv/beacon/bossbar/add/red
-function kcdk:plugin/sv/beacon/bossbar/add/green
-function kcdk:plugin/sv/beacon/bossbar/add/yellow
+function kcdkp:sv/beacon/bossbar/add/blue
+function kcdkp:sv/beacon/bossbar/add/red
+function kcdkp:sv/beacon/bossbar/add/green
+function kcdkp:sv/beacon/bossbar/add/yellow

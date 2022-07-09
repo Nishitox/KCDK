@@ -1,4 +1,4 @@
-function kcdk:plugin/bm/deploy/score/return/range
+function kcdkp:bm/deploy/score/return/range
 scoreboard players remove return kcdk.control 6
 execute if score return kcdk.control matches -5 run data merge block ~ ~ ~ {Command:"execute if score phase kcdk.control matches 0 as @a[team=red] positioned ~-10 ~4.5 ~-4 run function kcdk:player/set_deploy"}
 execute if score return kcdk.control matches -4 run data merge block ~ ~ ~ {Command:"execute if score phase kcdk.control matches 0 as @a[team=red] positioned ~-10 ~3.5 ~-4 run function kcdk:player/set_deploy"}

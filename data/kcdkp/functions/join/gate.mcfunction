@@ -1,1 +1,1 @@
-execute if score join kcdk.config matches 1 run function kcdk:plugin/join/control
+execute if score join kcdk.config matches 1 run function kcdkp:join/control

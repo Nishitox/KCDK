@@ -1,2 +1,2 @@
-function kcdk:plugin/igui/library/clear/change_gm
-function kcdk:plugin/igui/library/clear/inventory
+function kcdkp:igui/library/clear/change_gm
+function kcdkp:igui/library/clear/inventory

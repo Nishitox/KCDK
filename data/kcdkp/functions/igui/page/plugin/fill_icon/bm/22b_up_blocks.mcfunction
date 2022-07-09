@@ -1,1 +1,1 @@
-replaceitem entity @s inventory.13 minecraft:command_block{display:{Name:"{\"text\":\"bm.up blocks\"}",Lore:["{\"text\":\"ブロックを実行位置まで上げます\",\"color\":\"dark_gray\"}"]},BlockEntityTag:{Command:"function kcdk:plugin/bm/up/gate_1",auto:true}}
+replaceitem entity @s inventory.13 minecraft:command_block{display:{Name:"{\"text\":\"bm.up blocks\"}",Lore:["{\"text\":\"ブロックを実行位置まで上げます\",\"color\":\"dark_gray\"}"]},BlockEntityTag:{Command:"function kcdkp:bm/up/gate_1",auto:true}}

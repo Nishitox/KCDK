@@ -3,8 +3,8 @@ Inventory GUI / IGUI（標準）
 ---------------------------------------------------------------------------------------------------
 導入方法：
 ①「igui.zip」を解凍して〈KCDK 2.0/data/kcdk/functions/plugin/〉に入れてください。
-②〈KCDK 2.0/data/kcdk/functions/ptp/always.mcfunction〉に「function kcdk:plugin/igui/gate」を追加してください。
-③「/function kcdk:plugin/igui/setup」を実行してください。
+②〈KCDK 2.0/data/kcdk/functions/ptp/always.mcfunction〉に「function kcdkp:igui/gate」を追加してください。
+③「/function kcdkp:igui/setup」を実行してください。
 ※この拡張機能は既に導入されています。この手順を踏む必要はありません。
 
 設定方法：

@@ -1,2 +1,2 @@
-execute unless entity @e[type=minecraft:falling_block,tag=kcdkp.sv.beacon,distance=..1,limit=1] run function kcdk:plugin/sv/beacon/icon/set
+execute unless entity @e[type=minecraft:falling_block,tag=kcdkp.sv.beacon,distance=..1,limit=1] run function kcdkp:sv/beacon/icon/set
 data merge entity @e[type=minecraft:falling_block,tag=kcdkp.sv.beacon,nbt={Time:600},distance=..1,limit=1] {Time:1}

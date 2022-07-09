@@ -7,4 +7,4 @@ execute store result bossbar kcdkp:sv.beacon.blue max run scoreboard players get
 execute store result bossbar kcdkp:sv.beacon.red max run scoreboard players get max kcdkp.sv.beacon
 execute store result bossbar kcdkp:sv.beacon.green max run scoreboard players get max kcdkp.sv.beacon
 execute store result bossbar kcdkp:sv.beacon.yellow max run scoreboard players get max kcdkp.sv.beacon
-function kcdk:plugin/sv/beacon/bossbar/store
+function kcdkp:sv/beacon/bossbar/store

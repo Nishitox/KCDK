@@ -6,8 +6,8 @@ Survival / SV（標準）
 ※この拡張機能は既に導入されています。この手順を踏む必要はありません。
 
 設定方法：
-・「/function kcdk:plugin/sv/beacon/setup」を実行してください。
-・「/function kcdk:plugin/sv/ticket/setup」を実行してください。
+・「/function kcdkp:sv/beacon/setup」を実行してください。
+・「/function kcdkp:sv/ticket/setup」を実行してください。
 ・〈./sample.mcfuntion〉を参考に設定してください。
 
 スコアボード「kcdkp.sv.beacon」からビーコンの設定を変更することができます。

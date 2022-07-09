@@ -10,8 +10,8 @@ function kcdk:common/exit
 
 # setup ※初回時に以下のコマンドを実行してください
 gamerule keepInventory false
-function kcdk:plugin/sv/beacon/setup
-function kcdk:plugin/sv/ticket/setup
+function kcdkp:sv/beacon/setup
+function kcdkp:sv/ticket/setup
 
 #--------------------------------------------------------------------------------------------------
 
@@ -19,8 +19,8 @@ function kcdk:plugin/sv/ticket/setup
 
 # ctower:death
 # 以下のコマンドを「death」の一番最初（最下部）に追加してください。必ずbeacon/death_protectが先に実行されるようにしてください
-execute if score phase kcdk.control matches 2 as @a[scores={kcdk.death=1..}] run function kcdk:plugin/sv/beacon/death_protect
-execute if score phase kcdk.control matches 2 as @a[scores={kcdk.death=1..}] run function kcdk:plugin/sv/ticket/score/remove
+execute if score phase kcdk.control matches 2 as @a[scores={kcdk.death=1..}] run function kcdkp:sv/beacon/death_protect
+execute if score phase kcdk.control matches 2 as @a[scores={kcdk.death=1..}] run function kcdkp:sv/ticket/score/remove
 
 # ctower:victory conditions
 # 以下のコマンドを「victory conditions」に設定してください。使用しないチームの設定はスキップしてください
@@ -31,9 +31,9 @@ execute if score phase kcdk.control matches 2 if score blue kcdkp.sv.ticket matc
 
 # ctower:actionbar
 # 「actionbar」の3番目以上のコマンド(low_info, time, timer)を以下のコマンドに書き換えてください
-execute if score return kcdk.control matches 0 run function kcdk:plugin/sv/ticket/message/actionbar/low_info/control
-execute if score return kcdk.control matches 1 if score phase kcdk.control matches 2 run function kcdk:plugin/sv/ticket/message/actionbar/time/control
-execute if score return kcdk.control matches 2 if score phase kcdk.control matches 2 run function kcdk:plugin/sv/ticket/message/actionbar/timer/control
+execute if score return kcdk.control matches 0 run function kcdkp:sv/ticket/message/actionbar/low_info/control
+execute if score return kcdk.control matches 1 if score phase kcdk.control matches 2 run function kcdkp:sv/ticket/message/actionbar/time/control
+execute if score return kcdk.control matches 2 if score phase kcdk.control matches 2 run function kcdkp:sv/ticket/message/actionbar/timer/control
 
 # ctower:set_general_settings
 # 「set_general_settings」の1番目のコマンドを以下のコマンドに書き換えてください
@@ -45,17 +45,17 @@ gamemode survival @a[scores={kcdk.role=0..}]
 
 # ctower:kcdkp.sv.beacon
 # positioned ~ ~ ~ の座標を各ビーコンの位置に設定します。repeat実行されるようにしてください。使用しないチームの設定はスキップしてください
-execute if score phase kcdk.control matches 2 positioned ~ ~ ~ run function kcdk:plugin/sv/beacon/control/blue
-execute if score phase kcdk.control matches 2 positioned ~ ~ ~ run function kcdk:plugin/sv/beacon/control/green
-execute if score phase kcdk.control matches 2 positioned ~ ~ ~ run function kcdk:plugin/sv/beacon/control/red
-execute if score phase kcdk.control matches 2 positioned ~ ~ ~ run function kcdk:plugin/sv/beacon/control/yellow
-function kcdk:plugin/sv/beacon/bossbar/store
+execute if score phase kcdk.control matches 2 positioned ~ ~ ~ run function kcdkp:sv/beacon/control/blue
+execute if score phase kcdk.control matches 2 positioned ~ ~ ~ run function kcdkp:sv/beacon/control/green
+execute if score phase kcdk.control matches 2 positioned ~ ~ ~ run function kcdkp:sv/beacon/control/red
+execute if score phase kcdk.control matches 2 positioned ~ ~ ~ run function kcdkp:sv/beacon/control/yellow
+function kcdkp:sv/beacon/bossbar/store
 
 # ctower:kcdkp.sv.set
 # ゲーム開始前に以下のコマンドを実行してください。setblock ~ ~ ~ には各ビーコンの位置を設定します
 # 「start/end_game」の上に設置するか、「start/end_game」から呼び出すようにすることを推奨します
-function kcdk:plugin/sv/beacon/score/set
-function kcdk:plugin/sv/ticket/score/set
+function kcdkp:sv/beacon/score/set
+function kcdkp:sv/ticket/score/set
 setblock ~ ~ ~ minecraft:beacon
 
 #--------------------------------------------------------------------------------------------------

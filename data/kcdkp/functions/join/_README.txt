@@ -4,8 +4,8 @@ Join（標準）
 ---------------------------------------------------------------------------------------------------
 導入方法：
 ①「join.zip」を解凍して〈KCDK 2.0/data/kcdk/functions/plugin/〉に入れてください。
-②〈KCDK 2.0/data/kcdk/functions/ptp/always.mcfunction〉に「function kcdk:plugin/join/gate」を追加してください。
-③「/function kcdk:plugin/join/setup」を実行してください。
+②〈KCDK 2.0/data/kcdk/functions/ptp/always.mcfunction〉に「function kcdkp:join/gate」を追加してください。
+③「/function kcdkp:join/setup」を実行してください。
 ※この拡張機能は既に導入されています。この手順を踏む必要はありません。
 
 設定方法：

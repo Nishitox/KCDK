@@ -5,7 +5,7 @@ Kill Effect / KE（標準）
 導入方法：
 ①「ke.zip」を解凍して〈KCDK 2.0/data/kcdk/functions/plugin/〉に入れてください。
 ②〈player_killed_player.json〉を〈KCDK 2.0/data/kcdk/advancements/plugin/ke/〉に入れてください。
-③「/function kcdk:plugin/ke/setup」を実行してください。
+③「/function kcdkp:ke/setup」を実行してください。
 ※この拡張機能は既に導入されています。この手順を踏む必要はありません。
 
 設定方法：

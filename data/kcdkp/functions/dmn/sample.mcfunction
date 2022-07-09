@@ -4,7 +4,7 @@ function kcdk:common/exit
 # 本テキストの表記「# ctower:death」は、コマンドタワーの「death」を指します
 
 # setup ※初回時に以下のコマンドを実行してください
-function kcdk:plugin/dmn/setup
+function kcdkp:dmn/setup
 
 #--------------------------------------------------------------------------------------------------
 
@@ -12,26 +12,26 @@ function kcdk:plugin/dmn/setup
 
 # ctower:kcdkp.dmn.flag
 # @a[~]の範囲を各拠点の範囲に設定します。repeat実行されるようにしてください
-execute as @a[x=111,y=222,z=333,dx=11,dy=22,dz=33] run function kcdk:plugin/dmn/flag/a_flag/gate
-execute as @a[x=111,y=222,z=333,dx=11,dy=22,dz=33] run function kcdk:plugin/dmn/flag/b_flag/gate
-execute as @a[x=111,y=222,z=333,dx=11,dy=22,dz=33] run function kcdk:plugin/dmn/flag/c_flag/gate
-function kcdk:plugin/dmn/control
+execute as @a[x=111,y=222,z=333,dx=11,dy=22,dz=33] run function kcdkp:dmn/flag/a_flag/gate
+execute as @a[x=111,y=222,z=333,dx=11,dy=22,dz=33] run function kcdkp:dmn/flag/b_flag/gate
+execute as @a[x=111,y=222,z=333,dx=11,dy=22,dz=33] run function kcdkp:dmn/flag/c_flag/gate
+function kcdkp:dmn/control
 
 # ctower:kcdkp.dmn.reset
 # ゲーム開始前に以下のコマンドを実行してください。positioned ~ ~ ~ には各拠点の位置を設定します
 # 「start/end_game」の上に設置するか、「start/end_game」から呼び出すようにすることを推奨します
-function kcdk:plugin/dmn/score/reset
-function kcdk:plugin/dmn/icon/remove
-execute positioned ~ ~ ~ run function kcdk:plugin/dmn/icon/add/a_flag
-execute positioned ~ ~ ~ run function kcdk:plugin/dmn/icon/add/b_flag
-execute positioned ~ ~ ~ run function kcdk:plugin/dmn/icon/add/c_flag
+function kcdkp:dmn/score/reset
+function kcdkp:dmn/icon/remove
+execute positioned ~ ~ ~ run function kcdkp:dmn/icon/add/a_flag
+execute positioned ~ ~ ~ run function kcdkp:dmn/icon/add/b_flag
+execute positioned ~ ~ ~ run function kcdkp:dmn/icon/add/c_flag
 
 # ctower:kcdkp.dmn.ticket
 # repeat実行されるようにしてください。使用しないチームのコマンドを設置する必要はありません
-function kcdk:plugin/dmn/score/return/number_of_captured_flags/by_blue
-function kcdk:plugin/dmn/score/return/number_of_captured_flags/by_green
-function kcdk:plugin/dmn/score/return/number_of_captured_flags/by_red
-function kcdk:plugin/dmn/score/return/number_of_captured_flags/by_yellow
+function kcdkp:dmn/score/return/number_of_captured_flags/by_blue
+function kcdkp:dmn/score/return/number_of_captured_flags/by_green
+function kcdkp:dmn/score/return/number_of_captured_flags/by_red
+function kcdkp:dmn/score/return/number_of_captured_flags/by_yellow
 
 #--------------------------------------------------------------------------------------------------
 

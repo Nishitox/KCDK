@@ -1,2 +1,2 @@
-execute if block ~ ~-1 ~ minecraft:oak_sign{Text1:"{\"text\":\"kojosen\"}",Text2:"{\"text\":\"command\"}", Text3:"{\"text\":\"development kit\"}"} positioned ~-1 ~-2 ~-5 run function kcdk:plugin/bm/opt/optimize
+execute if block ~ ~-1 ~ minecraft:oak_sign{Text1:"{\"text\":\"kojosen\"}",Text2:"{\"text\":\"command\"}", Text3:"{\"text\":\"development kit\"}"} positioned ~-1 ~-2 ~-5 run function kcdkp:bm/opt/optimize
 setblock ~ ~ ~ minecraft:air
