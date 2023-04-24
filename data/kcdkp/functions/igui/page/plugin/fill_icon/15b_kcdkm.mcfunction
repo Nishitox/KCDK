@@ -1,1 +1,1 @@
-replaceitem entity @s inventory.6 minecraft:writable_book{display:{Name:'{"text":"kcdkm.status update"}',Lore:['{"text":"KCDKの有効数を調べて","color":"dark_gray"}','{"text":"重複していないか確認します","color":"dark_gray"}']},HideFlags:2}
+item replace entity @s inventory.6 with minecraft:writable_book{display:{Name:'{"text":"kcdkm.status update"}',Lore:['{"text":"KCDKの有効数を調べて","color":"dark_gray"}','{"text":"重複していないか確認します","color":"dark_gray"}']},HideFlags:2}

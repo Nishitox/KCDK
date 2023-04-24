@@ -1,2 +1,2 @@
-execute if score igui kcdk.config matches 0 run replaceitem entity @s inventory.9 minecraft:gray_dye{display:{Name:'{"text":"igui"}',Lore:['{"text":"インベントリにGUIを追加します","color":"dark_gray"}','{"text":"無効に設定されています","color":"dark_gray"}']}}
-execute if score igui kcdk.config matches 1 run replaceitem entity @s inventory.9 minecraft:lime_dye{display:{Name:'{"text":"igui"}',Lore:['{"text":"インベントリにGUIを追加します","color":"dark_gray"}','{"text":"有効に設定されています","color":"dark_gray"}']}}
+execute if score igui kcdk.config matches 0 run item replace entity @s inventory.9 with minecraft:gray_dye{display:{Name:'{"text":"igui"}',Lore:['{"text":"インベントリにGUIを追加します","color":"dark_gray"}','{"text":"無効に設定されています","color":"dark_gray"}']}}
+execute if score igui kcdk.config matches 1 run item replace entity @s inventory.9 with minecraft:lime_dye{display:{Name:'{"text":"igui"}',Lore:['{"text":"インベントリにGUIを追加します","color":"dark_gray"}','{"text":"有効に設定されています","color":"dark_gray"}']}}

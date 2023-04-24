@@ -1,1 +1,2 @@
-replaceitem entity @s inventory.17 minecraft:map{display:{Name:'{"text":"ページの非表示"}'}}
+item replace entity @s inventory.17 with minecraft:map{display:{Name:'{"text":"ページの非表示"}'}}
+

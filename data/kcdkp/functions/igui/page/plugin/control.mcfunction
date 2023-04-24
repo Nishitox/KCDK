@@ -48,5 +48,4 @@ execute if score return kcdk.control matches 4 unless entity @s[nbt={Inventory:[
 execute if score return kcdk.control matches 4 unless entity @s[nbt={Inventory:[{Count:1b,Slot:24b,id:"minecraft:command_block"}]}] run function kcdkp:igui/page/plugin/fill_icon/bm/24b_off_def_switch
 execute if score return kcdk.control matches 4 unless entity @s[nbt={Inventory:[{Count:1b,Slot:31b,id:"minecraft:command_block"}]}] run function kcdkp:igui/page/plugin/fill_icon/bm/31b_down_blocks
 execute if score return kcdk.control matches 4 unless entity @s[nbt={Inventory:[{Count:1b,Slot:32b,id:"minecraft:command_block"}]}] run function kcdkp:igui/page/plugin/fill_icon/bm/32b_optimize
-
 execute if score return kcdk.control matches 4 unless entity @s[nbt={Inventory:[{Count:1b,Slot:26b,id:"minecraft:arrow"}]}] run function kcdkp:igui/page/top/open
