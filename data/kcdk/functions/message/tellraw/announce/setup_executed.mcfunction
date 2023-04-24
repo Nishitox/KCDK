@@ -1,2 +1,2 @@
 # @ANCHOR: KCDK-VERSION(line 2, col 118)
-tellraw @a ["",{"text":"\n[kcdk:announce] ","color":"gray"},{"text":"セットアップを実行しました。セットアップの詳細は\n"},{"text":"datapacks:KCDK 2.2.0/data/kcdk/functions/setup","color":"yellow"},{"text":" から確認してください。\n"}]
+tellraw @a ["",{"text":"\n[kcdk:announce] ","color":"gray"},{"text":"セットアップを実行しました。セットアップの詳細は\n"},{"text":"datapacks:KCDK 3.0.0/data/kcdk/functions/setup","color":"yellow"},{"text":" から確認してください。\n"}]

@@ -1,1 +1,1 @@
-replaceitem entity @s inventory.4 minecraft:gray_dye{display:{Name:'{"text":"プラグインのリセット"}',Lore:['{"text":"*無効に設定されているプラグイン","color":"dark_gray"}','{"text":" の設定もリセットされます","color":"dark_gray"}']}}
+item replace entity @s inventory.4 with minecraft:gray_dye{display:{Name:'{"text":"プラグインのリセット"}',Lore:['{"text":"*無効に設定されているプラグイン","color":"dark_gray"}','{"text":" の設定もリセットされます","color":"dark_gray"}']}}
