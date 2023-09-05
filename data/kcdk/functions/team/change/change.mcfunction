@@ -1,14 +1,25 @@
-execute if score teams kcdk.control matches 1100 run function kcdk:team/change/2_teams/1100
-execute if score teams kcdk.control matches 1010 run function kcdk:team/change/2_teams/1010
-execute if score teams kcdk.control matches 1001 run function kcdk:team/change/2_teams/1001
-execute if score teams kcdk.control matches 0110 run function kcdk:team/change/2_teams/0110
-execute if score teams kcdk.control matches 0101 run function kcdk:team/change/2_teams/0101
-execute if score teams kcdk.control matches 0011 run function kcdk:team/change/2_teams/0011
-execute if score teams kcdk.control matches 1110 run function kcdk:team/change/3_teams/1110
-execute if score teams kcdk.control matches 1101 run function kcdk:team/change/3_teams/1101
-execute if score teams kcdk.control matches 1011 run function kcdk:team/change/3_teams/1011
-execute if score teams kcdk.control matches 0111 run function kcdk:team/change/3_teams/0111
-execute if score teams kcdk.control matches 1111 run function kcdk:team/change/4_teams/1111
+# add tag
+execute if data storage kcdk:team {enabled_teams: {blue:   true}} run tag @a[team=blue] add kcdk.team.blue
+execute if data storage kcdk:team {enabled_teams: {green:  true}} run tag @a[team=green] add kcdk.team.green
+execute if data storage kcdk:team {enabled_teams: {red:    true}} run tag @a[team=red] add kcdk.team.red
+execute if data storage kcdk:team {enabled_teams: {yellow: true}} run tag @a[team=yellow] add kcdk.team.yellow
 
-tag @a remove kcdk.team_change
+# empty teams
+execute if data storage kcdk:team {enabled_teams: {blue:   true}} run team empty blue
+execute if data storage kcdk:team {enabled_teams: {green:  true}} run team empty green
+execute if data storage kcdk:team {enabled_teams: {red:    true}} run team empty red
+execute if data storage kcdk:team {enabled_teams: {yellow: true}} run team empty yellow
+
+# change teams
+execute if data storage kcdk:team {enabled_teams: {blue:   true}} run function kcdk:team/change/target/blue
+execute if data storage kcdk:team {enabled_teams: {green:  true}} run function kcdk:team/change/target/green
+execute if data storage kcdk:team {enabled_teams: {red:    true}} run function kcdk:team/change/target/red
+execute if data storage kcdk:team {enabled_teams: {yellow: true}} run function kcdk:team/change/target/yellow
+
+# remove tag
+tag @a[tag=kcdk.team.blue] remove kcdk.team.blue
+tag @a[tag=kcdk.team.red] remove kcdk.team.red
+tag @a[tag=kcdk.team.green] remove kcdk.team.green
+tag @a[tag=kcdk.team.red] remove kcdk.team.red
+
 function kcdk:team/change/changed
