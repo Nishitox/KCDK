@@ -1,0 +1,1 @@
+title @a actionbar ["",{"score":{"name":"everyone","objective":"kcdk.players"}},{"text":"人が参加中 "},{"nbt":"actionbar_text[0]","storage":"kcdk:team"},{"text":" "},{"nbt":"actionbar_text[1]","storage":"kcdk:team"},{"text":" "},{"nbt":"actionbar_text[2]","storage":"kcdk:team"}]
