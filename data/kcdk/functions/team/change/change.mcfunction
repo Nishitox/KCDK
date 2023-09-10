@@ -22,4 +22,4 @@ tag @a[tag=kcdk.team.red] remove kcdk.team.red
 tag @a[tag=kcdk.team.green] remove kcdk.team.green
 tag @a[tag=kcdk.team.red] remove kcdk.team.red
 
-function kcdk:team/change/changed
+function kcdk:team/change/done
