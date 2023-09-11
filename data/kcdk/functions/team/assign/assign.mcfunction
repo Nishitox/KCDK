@@ -39,5 +39,5 @@ execute if score teams kcdk.control matches 1111 if score blue kcdk.players >= r
 function kcdk:score/store/number_of_team_players
 execute if score teams kcdk.control matches 1111 if score blue kcdk.players >= yellow kcdk.players if score green kcdk.players >= yellow kcdk.players if score red kcdk.players >= yellow kcdk.players run team join yellow @r[team=]
 
-execute unless entity @a[team=] run function kcdk:team/assign/assigned
+execute unless entity @a[team=] run function kcdk:team/assign/done
 execute if entity @a[team=] run function kcdk:team/assign/assign
