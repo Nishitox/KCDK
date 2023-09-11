@@ -1,0 +1,44 @@
+{
+  "condition": "minecraft:all_of",
+  "terms": [
+    {
+      "condition": "minecraft:value_check",
+      "value": {
+        "type": "minecraft:score",
+        "target": {
+          "type": "minecraft:fixed",
+          "name": "time_m"
+        },
+        "score": "kcdk.control",
+        "scale": 1
+      },
+      "range": 0
+    },
+    {
+      "condition": "minecraft:value_check",
+      "value": {
+        "type": "minecraft:score",
+        "target": {
+          "type": "minecraft:fixed",
+          "name": "time_s"
+        },
+        "score": "kcdk.control",
+        "scale": 1
+      },
+      "range": 0
+    },
+    {
+      "condition": "minecraft:value_check",
+      "value": {
+        "type": "minecraft:score",
+        "target": {
+          "type": "minecraft:fixed",
+          "name": "time_t"
+        },
+        "score": "kcdk.control",
+        "scale": 1
+      },
+      "range": 0
+    }
+  ]
+}
