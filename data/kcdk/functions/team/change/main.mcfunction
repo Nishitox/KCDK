@@ -1,5 +1,26 @@
-# 有効なチーム数が2つ以上の場合
-execute store result score tmp kcdk.control run data get storage kcdk:team number_of_enabled_teams
-execute if score tmp kcdk.control matches 0 run function kcdk:message/tellraw/error/no_team_selected
-execute if score tmp kcdk.control matches 1 run function kcdk:message/tellraw/error/failed_to_change_teams
-execute if score tmp kcdk.control matches 2..4 run function kcdk:team/change/gateway
+# add tag
+execute if data storage kcdk:team {enabled_teams: {blue:   true}} run tag @a[team=blue] add kcdk.team.blue
+execute if data storage kcdk:team {enabled_teams: {green:  true}} run tag @a[team=green] add kcdk.team.green
+execute if data storage kcdk:team {enabled_teams: {red:    true}} run tag @a[team=red] add kcdk.team.red
+execute if data storage kcdk:team {enabled_teams: {yellow: true}} run tag @a[team=yellow] add kcdk.team.yellow
+
+# empty teams
+execute if data storage kcdk:team {enabled_teams: {blue:   true}} run team empty blue
+execute if data storage kcdk:team {enabled_teams: {green:  true}} run team empty green
+execute if data storage kcdk:team {enabled_teams: {red:    true}} run team empty red
+execute if data storage kcdk:team {enabled_teams: {yellow: true}} run team empty yellow
+
+# change teams
+execute if data storage kcdk:team {enabled_teams: {blue:   true}} run function kcdk:team/change/target/blue
+execute if data storage kcdk:team {enabled_teams: {green:  true}} run function kcdk:team/change/target/green
+execute if data storage kcdk:team {enabled_teams: {red:    true}} run function kcdk:team/change/target/red
+execute if data storage kcdk:team {enabled_teams: {yellow: true}} run function kcdk:team/change/target/yellow
+
+# remove tag
+tag @a[tag=kcdk.team.blue] remove kcdk.team.blue
+tag @a[tag=kcdk.team.red] remove kcdk.team.red
+tag @a[tag=kcdk.team.green] remove kcdk.team.green
+tag @a[tag=kcdk.team.red] remove kcdk.team.red
+
+# finish
+function kcdk:team/change/done
