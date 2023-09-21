@@ -1,4 +1,4 @@
-function kcdk:common/initial_settings/scoreboard
+function kcdk:score/define
 function kcdk:score/detect_version
 
 function kcdk:common/initial_settings/gamerules
