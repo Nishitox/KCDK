@@ -37,4 +37,4 @@ execute if data storage kcdk:team {enabled_teams: {yellow: true}} run team join 
 
 # finish
 execute unless entity @a[team=] run function kcdk:team/assign/done
-execute if entity @a[team=] run function kcdk:team/assign/assign
+execute if entity @a[team=] run function kcdk:team/assign/process
