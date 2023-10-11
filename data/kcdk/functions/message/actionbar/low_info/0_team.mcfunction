@@ -1,1 +1,1 @@
-title @a actionbar ["",{"score":{"name":"everyone","objective":"kcdk.players"}},{"text":"人が参加中"}]
+title @a actionbar ["", {"interpret":true, "nbt":"actionbar.players.everyone", "storage":"kcdk:message"}]
