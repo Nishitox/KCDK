@@ -1,1 +1,0 @@
-function kcdk:message/actionbar/assemble_actionbar
