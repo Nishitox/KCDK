@@ -35,3 +35,7 @@ data modify storage kcdk:message title merge value {defeat: {blue:  '["",{"text"
 data modify storage kcdk:message title merge value {defeat: {green: '["",{"text":"緑チームの敗北","color":"green"}]'}}
 data modify storage kcdk:message title merge value {defeat: {red:   '["",{"text":"赤チームの敗北","color":"red"}]'}}
 data modify storage kcdk:message title merge value {defeat: {yellow:'["",{"text":"黄色チームの敗北","color":"yellow"}]'}}
+data modify storage kcdk:message title merge value {number_of_team_players:{blue:  '["",{"score":{"name":"blue",  "objective":"kcdk.players"},"color":"blue"}]'}}
+data modify storage kcdk:message title merge value {number_of_team_players:{green: '["",{"score":{"name":"green", "objective":"kcdk.players"},"color":"green"}]'}}
+data modify storage kcdk:message title merge value {number_of_team_players:{red:   '["",{"score":{"name":"red",   "objective":"kcdk.players"},"color":"red"}]'}}
+data modify storage kcdk:message title merge value {number_of_team_players:{yellow:'["",{"score":{"name":"yellow","objective":"kcdk.players"},"color":"yellow"}]'}}
