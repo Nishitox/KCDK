@@ -12,3 +12,9 @@ data modify storage kcdk:message actionbar merge value {timer:'["",{"text":" �
 data modify storage kcdk:message actionbar merge value {countdown:{ms:'["",{"score":{"name":"timer_m","objective":"kcdk.control"}},{"text":"分"},{"score":{"name":"timer_s","objective":"kcdk.control"}},{"text":"秒後にゲームを開始します"}]'}}
 data modify storage kcdk:message actionbar merge value {countdown:{m: '["",{"score":{"name":"timer_m","objective":"kcdk.control"}},{"text":"分後にゲームを開始します"}]'}}
 data modify storage kcdk:message actionbar merge value {countdown:{s: '["",{"score":{"name":"timer_s","objective":"kcdk.control"}},{"text":"秒後にゲームを開始します"}]'}}
+
+# subtitle
+data modify storage kcdk:message subtitle merge value {changed_to_team:{blue:   '["",{"text":"青チームに変更されました。"}]'}}
+data modify storage kcdk:message subtitle merge value {changed_to_team:{green:  '["",{"text":"緑チームに変更されました。"}]'}}
+data modify storage kcdk:message subtitle merge value {changed_to_team:{red:    '["",{"text":"赤チームに変更されました。"}]'}}
+data modify storage kcdk:message subtitle merge value {changed_to_team:{yellow: '["",{"text":"黄色チームに変更されました。"}]'}}
