@@ -1,7 +1,5 @@
-title @a times 0 100 20
-title @a title ["",{"text":""}]
-
-title @a[team=blue] subtitle ["",{"text":"青チームに参加しました。"}]
-title @a[team=green] subtitle ["",{"text":"緑チームに参加しました。"}]
-title @a[team=red] subtitle ["",{"text":"赤チームに参加しました。"}]
-title @a[team=yellow] subtitle ["",{"text":"黄色チームに参加しました。"}]
+function kcdk:message/title/none
+title @a[team=blue] subtitle ["",   {"interpret":true, "nbt":"subtitle.joined_to_team.blue",   "storage":"kcdk:message"}]
+title @a[team=green] subtitle ["",  {"interpret":true, "nbt":"subtitle.joined_to_team.green",  "storage":"kcdk:message"}]
+title @a[team=red] subtitle ["",    {"interpret":true, "nbt":"subtitle.joined_to_team.red",    "storage":"kcdk:message"}]
+title @a[team=yellow] subtitle ["", {"interpret":true, "nbt":"subtitle.joined_to_team.yellow", "storage":"kcdk:message"}]
