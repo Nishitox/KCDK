@@ -9,3 +9,6 @@ data modify storage kcdk:message actionbar merge value {players:{red:     '["",{
 data modify storage kcdk:message actionbar merge value {players:{yellow:  '["",{"text":" 🛡 ","color":"yellow"},{"score":{"name":"yellow","objective":"kcdk.players"}},{"text":" "}]'}}
 data modify storage kcdk:message actionbar merge value {time: '["",{"text":" 🧪 "},{"score":{"name":"time_m", "objective":"kcdk.control"}},{"text":":"},{"score":{"name":"time_s", "objective":"kcdk.control"}}]'}
 data modify storage kcdk:message actionbar merge value {timer:'["",{"text":" 🧪 "},{"score":{"name":"timer_m","objective":"kcdk.control"}},{"text":":"},{"score":{"name":"timer_s","objective":"kcdk.control"}}]'}
+data modify storage kcdk:message actionbar merge value {countdown:{ms:'["",{"score":{"name":"timer_m","objective":"kcdk.control"}},{"text":"分"},{"score":{"name":"timer_s","objective":"kcdk.control"}},{"text":"秒後にゲームを開始します"}]'}}
+data modify storage kcdk:message actionbar merge value {countdown:{m: '["",{"score":{"name":"timer_m","objective":"kcdk.control"}},{"text":"分後にゲームを開始します"}]'}}
+data modify storage kcdk:message actionbar merge value {countdown:{s: '["",{"score":{"name":"timer_s","objective":"kcdk.control"}},{"text":"秒後にゲームを開始します"}]'}}
