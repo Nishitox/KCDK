@@ -11,6 +11,7 @@ function kcdk:common/default_settings/worldspawn
 function kcdk:common/initial_settings/gamerules
 function kcdk:bossbar/add/general
 function kcdk:team/initialize
+function kcdk:message/lang
 function kcdk:ptp/setup
 
 function kcdk:message/tellraw/announce/setup_with_formatting_executed
