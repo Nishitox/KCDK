@@ -86,4 +86,12 @@ data modify storage kcdk:message tellraw merge value {no_team_selected:      '["
 data modify storage kcdk:message tellraw merge value {player_does_not_exist: '["",{"text":"有効なプレイヤーが存在しません。\\n"}]'}
 
 # tellraw: notice
-
+data modify storage kcdk:message tellraw merge value {notice:'["",{"text":"\\n[kcdk:notice] ","color":"gray"}'}
+data modify storage kcdk:message tellraw merge value {joined_to_team:{blue:    '{"text":"青チームに参加しました。\\n"}]'}}
+data modify storage kcdk:message tellraw merge value {joined_to_team:{green:   '{"text":"緑チームに参加しました。\\n"}]'}}
+data modify storage kcdk:message tellraw merge value {joined_to_team:{red:     '{"text":"赤チームに参加しました。\\n"}]'}}
+data modify storage kcdk:message tellraw merge value {joined_to_team:{yellow:  '{"text":"黄色チームに参加しました。\\n"}]'}}
+data modify storage kcdk:message tellraw merge value {changed_to_team:{blue:   '["",{"text":"青チームに変更されました。\\n"}]'}}
+data modify storage kcdk:message tellraw merge value {changed_to_team:{green:  '["",{"text":"緑チームに変更されました。\\n"}]'}}
+data modify storage kcdk:message tellraw merge value {changed_to_team:{red:    '["",{"text":"赤チームに変更されました。\\n"}]'}}
+data modify storage kcdk:message tellraw merge value {changed_to_team:{yellow: '["",{"text":"黄色チームに変更されました。\\n"}]'}}
