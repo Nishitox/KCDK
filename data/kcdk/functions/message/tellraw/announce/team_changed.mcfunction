@@ -1,1 +1,1 @@
-tellraw @a ["",{"text":"\n[kcdk:announce] ","color":"gray"},{"text":"プレイヤーのチームを入れ替えました。\n"}]
+tellraw @a ["", {"interpret":true, "nbt":"tellraw.announce", "storage":"kcdk:message"}, {"interpret":true, "nbt":"tellraw.team_changed", "storage":"kcdk:message"}]
