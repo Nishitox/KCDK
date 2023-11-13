@@ -1,1 +1,1 @@
-tellraw @a ["", {"interpret":true, "nbt":"tellraw.error", "storage":"kcdk:message"}, {"interpret":true, "nbt":"tellraw.failed_to_change_teams", "storage":"kcdk:message"}]
+tellraw @a ["", {"interpret":true, "nbt":"tellraw.error", "storage":"kcdk:message"}, {"interpret":true, "nbt":"tellraw.failed_to_change_teams", "storage":"kcdk:message"},{"text":"\n"}]
