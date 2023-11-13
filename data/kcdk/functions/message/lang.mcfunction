@@ -36,6 +36,7 @@ data modify storage kcdk:message actionbar merge value {countdown: {s:  '["",{"s
 data modify storage kcdk:message actionbar merge value {time:  '["",{"text":" 🧪 "},{"score":{"name":"time_m", "objective":"kcdk.control"}},{"text":":"},{"score":{"name":"time_s", "objective":"kcdk.control"}}]'}
 data modify storage kcdk:message actionbar merge value {timer: '["",{"text":" 🧪 "},{"score":{"name":"timer_m","objective":"kcdk.control"}},{"text":":"},{"score":{"name":"timer_s","objective":"kcdk.control"}}]'}
 
+
 # title: game end
 data modify storage kcdk:message title merge value {victory: {blue:   '["",{"text":"青チームの勝利",  "color":"blue"}]'}}
 data modify storage kcdk:message title merge value {victory: {green:  '["",{"text":"緑チームの勝利",  "color":"green"}]'}}
