@@ -79,7 +79,11 @@ data modify storage kcdk:message tellraw merge value {setup_executed:           
 data modify storage kcdk:message tellraw merge value {setup_with_formatting_executed:'["",{"text":"初期化セットアップを実行しました。セットアップの詳細は\\n"},{"text":"datapacks:KCDK 2.2.0/data/kcdk/functions/setup_with_formatting","color":"yellow"},{"text":" から確認してください。\\n"}]'}
 
 
-# tellraw error
+# tellraw: error
+data modify storage kcdk:message tellraw merge value {error:'["",{"text":"\\n[kcdk:error] ","color":"red"}]'}
+data modify storage kcdk:message tellraw merge value {failed_to_change_teams:'["",{"text":"チームが1つしか選択されていません。\\n"}]'}
+data modify storage kcdk:message tellraw merge value {no_team_selected:      '["",{"text":"チームが選択されていません。\\n"}]'}
+data modify storage kcdk:message tellraw merge value {player_does_not_exist: '["",{"text":"有効なプレイヤーが存在しません。\\n"}]'}
 
-# tellraw notice
+# tellraw: notice
 

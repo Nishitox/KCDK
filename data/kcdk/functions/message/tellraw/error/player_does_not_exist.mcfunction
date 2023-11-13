@@ -1,1 +1,1 @@
-tellraw @a ["",{"text":"\n[kcdk:error] ","color":"red"},{"text":"有効なプレイヤーが存在しません。\n"}]
+tellraw @a ["", {"interpret":true, "nbt":"tellraw.error", "storage":"kcdk:message"}, {"interpret":true, "nbt":"tellraw.player_does_not_exist", "storage":"kcdk:message"}]

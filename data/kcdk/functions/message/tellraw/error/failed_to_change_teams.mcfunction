@@ -1,1 +1,1 @@
-tellraw @a ["",{"text":"\n[kcdk:error] ","color":"red"},{"text":"チームが1つしか選択されていません。\n"}]
+tellraw @a ["", {"interpret":true, "nbt":"tellraw.error", "storage":"kcdk:message"}, {"interpret":true, "nbt":"tellraw.failed_to_change_teams", "storage":"kcdk:message"}]
