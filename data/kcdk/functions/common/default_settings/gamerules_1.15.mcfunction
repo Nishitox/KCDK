@@ -4,7 +4,6 @@ gamerule doInsomnia true
 gamerule drowningDamage true
 gamerule fallDamage true
 gamerule fireDamage true
-gamerule forgiveDeadPlayers true
 
 # 1.15.2
 gamerule doPatrolSpawning true
