@@ -25,3 +25,6 @@ gamerule spectatorsGenerateChunks true
 execute if score version kcdk.control matches 14.. run function kcdk:common/default_settings/gamerules_1.14
 execute if score version kcdk.control matches 15.. run function kcdk:common/default_settings/gamerules_1.15
 execute if score version kcdk.control matches 16.. run function kcdk:common/default_settings/gamerules_1.16
+execute if score version kcdk.control matches 17.. run function kcdk:common/default_settings/gamerules_1.17
+execute if score version kcdk.control matches 19.. run function kcdk:common/default_settings/gamerules_1.19
+execute if score version kcdk.control matches 20.. run function kcdk:common/default_settings/gamerules_1.20
