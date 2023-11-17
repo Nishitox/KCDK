@@ -73,8 +73,8 @@ data modify storage kcdk:message tellraw merge value {announce: {team_changed:  
 data modify storage kcdk:message tellraw merge value {announce: {team_emptied:  '["",{"text":"チームを空にしました。"}]'}}
 
 # tellraw: announce: setups
-data modify storage kcdk:message tellraw merge value {announce: {setup_executed:                 '["",{"text":"セットアップを実行しました。セットアップの詳細は\\n"},{"text":"datapacks:KCDK 2.2.0/data/kcdk/functions/setup","color":"yellow"},{"text":" から確認してください。"}]'}}
-data modify storage kcdk:message tellraw merge value {announce: {setup_with_formatting_executed: '["",{"text":"初期化セットアップを実行しました。セットアップの詳細は\\n"},{"text":"datapacks:KCDK 2.2.0/data/kcdk/functions/setup_with_formatting","color":"yellow"},{"text":" から確認してください。"}]'}}
+data modify storage kcdk:message tellraw merge value {announce: {setup_executed:                 '["",{"text":"セットアップを実行しました。セットアップの詳細は\\n"},{"text":"datapacks:KCDK 2.3.0/data/kcdk/functions/setup","color":"yellow"},{"text":" から確認してください。"}]'}}
+data modify storage kcdk:message tellraw merge value {announce: {setup_with_formatting_executed: '["",{"text":"初期化セットアップを実行しました。セットアップの詳細は\\n"},{"text":"datapacks:KCDK 2.3.0/data/kcdk/functions/setup_with_formatting","color":"yellow"},{"text":" から確認してください。"}]'}}
 
 # tellraw: error
 data modify storage kcdk:message tellraw merge value {error: {failed_to_change_teams: '["",{"text":"チームが1つしか選択されていません。"}]'}}
