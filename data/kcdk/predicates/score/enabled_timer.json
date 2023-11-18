@@ -9,7 +9,7 @@
           "type": "minecraft:score",
           "target": {
             "type": "minecraft:fixed",
-            "name": "timer_m"
+            "name": "#timer_m"
           },
           "score": "kcdk.control",
           "scale": 1
@@ -22,7 +22,7 @@
           "type": "minecraft:score",
           "target": {
             "type": "minecraft:fixed",
-            "name": "timer_s"
+            "name": "#timer_s"
           },
           "score": "kcdk.control",
           "scale": 1
