@@ -28,23 +28,23 @@ execute if entity @s[nbt={Inventory:[{Slot:33b}]}] run replaceitem entity @s inv
 # execute if entity @s[nbt={Inventory:[{Slot:34b}]}] run replaceitem entity @s inventory.25 minecraft:air
 # execute if entity @s[nbt={Inventory:[{Slot:35b}]}] run replaceitem entity @s inventory.26 minecraft:air
 
-execute if score return kcdk.control matches 2 unless entity @s[nbt={Inventory:[{Count:1b,Slot:12b,id:"minecraft:black_stained_glass_pane"}]}] run function kcdkp:igui/library/action/frame_1
-execute if score return kcdk.control matches 2 unless entity @s[nbt={Inventory:[{Count:1b,Slot:21b,id:"minecraft:black_stained_glass_pane"}]}] run function kcdkp:igui/library/action/frame_1
-execute if score return kcdk.control matches 2 unless entity @s[nbt={Inventory:[{Count:1b,Slot:30b,id:"minecraft:black_stained_glass_pane"}]}] run function kcdkp:igui/library/action/frame_1
-execute if score return kcdk.control matches 2 unless entity @s[nbt={Inventory:[{Count:1b,Slot:16b,id:"minecraft:black_stained_glass_pane"}]}] run function kcdkp:igui/library/action/frame_1
-execute if score return kcdk.control matches 2 unless entity @s[nbt={Inventory:[{Count:1b,Slot:25b,id:"minecraft:black_stained_glass_pane"}]}] run function kcdkp:igui/library/action/frame_1
-execute if score return kcdk.control matches 2 unless entity @s[nbt={Inventory:[{Count:1b,Slot:34b,id:"minecraft:black_stained_glass_pane"}]}] run function kcdkp:igui/library/action/frame_1
+execute if score #return kcdk.control matches 2 unless entity @s[nbt={Inventory:[{Count:1b,Slot:12b,id:"minecraft:black_stained_glass_pane"}]}] run function kcdkp:igui/library/action/frame_1
+execute if score #return kcdk.control matches 2 unless entity @s[nbt={Inventory:[{Count:1b,Slot:21b,id:"minecraft:black_stained_glass_pane"}]}] run function kcdkp:igui/library/action/frame_1
+execute if score #return kcdk.control matches 2 unless entity @s[nbt={Inventory:[{Count:1b,Slot:30b,id:"minecraft:black_stained_glass_pane"}]}] run function kcdkp:igui/library/action/frame_1
+execute if score #return kcdk.control matches 2 unless entity @s[nbt={Inventory:[{Count:1b,Slot:16b,id:"minecraft:black_stained_glass_pane"}]}] run function kcdkp:igui/library/action/frame_1
+execute if score #return kcdk.control matches 2 unless entity @s[nbt={Inventory:[{Count:1b,Slot:25b,id:"minecraft:black_stained_glass_pane"}]}] run function kcdkp:igui/library/action/frame_1
+execute if score #return kcdk.control matches 2 unless entity @s[nbt={Inventory:[{Count:1b,Slot:34b,id:"minecraft:black_stained_glass_pane"}]}] run function kcdkp:igui/library/action/frame_1
 
-execute if score return kcdk.control matches 2 unless entity @s[nbt={Inventory:[{Count:1b,Slot:9b,id:"minecraft:command_block"}]}] run function kcdkp:igui/page/file/fill_icon/item/09b_blue_chestplate
-execute if score return kcdk.control matches 2 unless entity @s[nbt={Inventory:[{Count:1b,Slot:10b,id:"minecraft:command_block"}]}] run function kcdkp:igui/page/file/fill_icon/item/10b_green_chestplate
-execute if score return kcdk.control matches 2 unless entity @s[nbt={Inventory:[{Count:1b,Slot:11b,id:"minecraft:command_block"}]}] run function kcdkp:igui/page/file/fill_icon/item/11b_red_chestplate
-execute if score return kcdk.control matches 2 unless entity @s[nbt={Inventory:[{Count:1b,Slot:18b,id:"minecraft:command_block"}]}] run function kcdkp:igui/page/file/fill_icon/item/18b_yellow_chestplate
-execute if score return kcdk.control matches 2 unless entity @s[nbt={Inventory:[{Count:1b,Slot:19b,id:"minecraft:command_block"}]}] run function kcdkp:igui/page/file/fill_icon/item/19b_wooden_pickaxe
-execute if score return kcdk.control matches 2 unless entity @s[nbt={Inventory:[{Count:1b,Slot:20b,id:"minecraft:command_block"}]}] run function kcdkp:igui/page/file/fill_icon/command/20b_dice
+execute if score #return kcdk.control matches 2 unless entity @s[nbt={Inventory:[{Count:1b,Slot:9b,id:"minecraft:command_block"}]}] run function kcdkp:igui/page/file/fill_icon/item/09b_blue_chestplate
+execute if score #return kcdk.control matches 2 unless entity @s[nbt={Inventory:[{Count:1b,Slot:10b,id:"minecraft:command_block"}]}] run function kcdkp:igui/page/file/fill_icon/item/10b_green_chestplate
+execute if score #return kcdk.control matches 2 unless entity @s[nbt={Inventory:[{Count:1b,Slot:11b,id:"minecraft:command_block"}]}] run function kcdkp:igui/page/file/fill_icon/item/11b_red_chestplate
+execute if score #return kcdk.control matches 2 unless entity @s[nbt={Inventory:[{Count:1b,Slot:18b,id:"minecraft:command_block"}]}] run function kcdkp:igui/page/file/fill_icon/item/18b_yellow_chestplate
+execute if score #return kcdk.control matches 2 unless entity @s[nbt={Inventory:[{Count:1b,Slot:19b,id:"minecraft:command_block"}]}] run function kcdkp:igui/page/file/fill_icon/item/19b_wooden_pickaxe
+execute if score #return kcdk.control matches 2 unless entity @s[nbt={Inventory:[{Count:1b,Slot:20b,id:"minecraft:command_block"}]}] run function kcdkp:igui/page/file/fill_icon/command/20b_dice
 
-execute if score return kcdk.control matches 2 unless entity @s[nbt={Inventory:[{Count:1b,Slot:13b,id:"minecraft:command_block"}]}] run function kcdkp:igui/page/file/fill_icon/condition/13b_annihilation
-execute if score return kcdk.control matches 2 unless entity @s[nbt={Inventory:[{Count:1b,Slot:14b,id:"minecraft:command_block"}]}] run function kcdkp:igui/page/file/fill_icon/condition/14b_destroy_beacon
-execute if score return kcdk.control matches 2 unless entity @s[nbt={Inventory:[{Count:1b,Slot:15b,id:"minecraft:command_block"}]}] run function kcdkp:igui/page/file/fill_icon/condition/15b_generals_death
-execute if score return kcdk.control matches 2 unless entity @s[nbt={Inventory:[{Count:1b,Slot:22b,id:"minecraft:command_block"}]}] run function kcdkp:igui/page/file/fill_icon/condition/22b_time_left
+execute if score #return kcdk.control matches 2 unless entity @s[nbt={Inventory:[{Count:1b,Slot:13b,id:"minecraft:command_block"}]}] run function kcdkp:igui/page/file/fill_icon/condition/13b_annihilation
+execute if score #return kcdk.control matches 2 unless entity @s[nbt={Inventory:[{Count:1b,Slot:14b,id:"minecraft:command_block"}]}] run function kcdkp:igui/page/file/fill_icon/condition/14b_destroy_beacon
+execute if score #return kcdk.control matches 2 unless entity @s[nbt={Inventory:[{Count:1b,Slot:15b,id:"minecraft:command_block"}]}] run function kcdkp:igui/page/file/fill_icon/condition/15b_generals_death
+execute if score #return kcdk.control matches 2 unless entity @s[nbt={Inventory:[{Count:1b,Slot:22b,id:"minecraft:command_block"}]}] run function kcdkp:igui/page/file/fill_icon/condition/22b_time_left
 
-execute if score return kcdk.control matches 2 unless entity @s[nbt={Inventory:[{Count:1b,Slot:26b,id:"minecraft:arrow"}]}] run function kcdkp:igui/page/top/open
+execute if score #return kcdk.control matches 2 unless entity @s[nbt={Inventory:[{Count:1b,Slot:26b,id:"minecraft:arrow"}]}] run function kcdkp:igui/page/top/open

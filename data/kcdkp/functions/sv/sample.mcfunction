@@ -31,9 +31,9 @@ execute if score #phase kcdk.control matches 2 if score blue kcdkp.sv.ticket mat
 
 # ctower:actionbar
 # 「actionbar」の3番目以上のコマンド(low_info, time, timer)を以下のコマンドに書き換えてください
-execute if score return kcdk.control matches 0 run function kcdkp:sv/ticket/message/actionbar/low_info/control
-execute if score return kcdk.control matches 1 if score #phase kcdk.control matches 2 run function kcdkp:sv/ticket/message/actionbar/time/control
-execute if score return kcdk.control matches 2 if score #phase kcdk.control matches 2 run function kcdkp:sv/ticket/message/actionbar/timer/control
+execute if score #return kcdk.control matches 0 run function kcdkp:sv/ticket/message/actionbar/low_info/control
+execute if score #return kcdk.control matches 1 if score #phase kcdk.control matches 2 run function kcdkp:sv/ticket/message/actionbar/time/control
+execute if score #return kcdk.control matches 2 if score #phase kcdk.control matches 2 run function kcdkp:sv/ticket/message/actionbar/timer/control
 
 # ctower:set_general_settings
 # 「set_general_settings」の1番目のコマンドを以下のコマンドに書き換えてください

@@ -28,13 +28,13 @@ execute if entity @s[nbt={Inventory:[{Slot:33b}]}] run replaceitem entity @s inv
 execute if entity @s[nbt={Inventory:[{Slot:34b}]}] run replaceitem entity @s inventory.25 minecraft:air
 # execute if entity @s[nbt={Inventory:[{Slot:35b}]}] run replaceitem entity @s inventory.26 minecraft:air
 
-execute if score return kcdk.control matches 3 unless entity @s[nbt={Inventory:[{Count:1b,Slot:20b,id:"minecraft:blue_carpet"}]}] unless entity @s[nbt={Inventory:[{Count:1b,Slot:20b,id:"minecraft:blue_concrete"}]}] run function kcdkp:igui/page/team/action/toggle_team/blue
-execute if score return kcdk.control matches 3 unless entity @s[nbt={Inventory:[{Count:1b,Slot:21b,id:"minecraft:lime_carpet"}]}] unless entity @s[nbt={Inventory:[{Count:1b,Slot:21b,id:"minecraft:lime_concrete"}]}] run function kcdkp:igui/page/team/action/toggle_team/green
-execute if score return kcdk.control matches 3 unless entity @s[nbt={Inventory:[{Count:1b,Slot:22b,id:"minecraft:red_carpet"}]}] unless entity @s[nbt={Inventory:[{Count:1b,Slot:22b,id:"minecraft:red_concrete"}]}] run function kcdkp:igui/page/team/action/toggle_team/red
-execute if score return kcdk.control matches 3 unless entity @s[nbt={Inventory:[{Count:1b,Slot:23b,id:"minecraft:yellow_carpet"}]}] unless entity @s[nbt={Inventory:[{Count:1b,Slot:23b,id:"minecraft:yellow_concrete"}]}] run function kcdkp:igui/page/team/action/toggle_team/yellow
+execute if score #return kcdk.control matches 3 unless entity @s[nbt={Inventory:[{Count:1b,Slot:20b,id:"minecraft:blue_carpet"}]}] unless entity @s[nbt={Inventory:[{Count:1b,Slot:20b,id:"minecraft:blue_concrete"}]}] run function kcdkp:igui/page/team/action/toggle_team/blue
+execute if score #return kcdk.control matches 3 unless entity @s[nbt={Inventory:[{Count:1b,Slot:21b,id:"minecraft:lime_carpet"}]}] unless entity @s[nbt={Inventory:[{Count:1b,Slot:21b,id:"minecraft:lime_concrete"}]}] run function kcdkp:igui/page/team/action/toggle_team/green
+execute if score #return kcdk.control matches 3 unless entity @s[nbt={Inventory:[{Count:1b,Slot:22b,id:"minecraft:red_carpet"}]}] unless entity @s[nbt={Inventory:[{Count:1b,Slot:22b,id:"minecraft:red_concrete"}]}] run function kcdkp:igui/page/team/action/toggle_team/red
+execute if score #return kcdk.control matches 3 unless entity @s[nbt={Inventory:[{Count:1b,Slot:23b,id:"minecraft:yellow_carpet"}]}] unless entity @s[nbt={Inventory:[{Count:1b,Slot:23b,id:"minecraft:yellow_concrete"}]}] run function kcdkp:igui/page/team/action/toggle_team/yellow
 
-execute if score return kcdk.control matches 3 unless entity @s[nbt={Inventory:[{Count:1b,Slot:9b,id:"minecraft:writable_book"}]}] run function kcdkp:igui/page/team/action/assign
-execute if score return kcdk.control matches 3 unless entity @s[nbt={Inventory:[{Count:1b,Slot:24b,id:"minecraft:stone_pickaxe"}]}] run function kcdkp:igui/page/team/action/create
-execute if score return kcdk.control matches 3 unless entity @s[nbt={Inventory:[{Count:1b,Slot:18b,id:"minecraft:book"}]}] run function kcdkp:igui/page/team/action/change
-execute if score return kcdk.control matches 3 unless entity @s[nbt={Inventory:[{Count:1b,Slot:27b,id:"minecraft:paper"}]}] run function kcdkp:igui/page/team/action/empty
-execute if score return kcdk.control matches 3 unless entity @s[nbt={Inventory:[{Count:1b,Slot:26b,id:"minecraft:arrow"}]}] run function kcdkp:igui/page/top/open
+execute if score #return kcdk.control matches 3 unless entity @s[nbt={Inventory:[{Count:1b,Slot:9b,id:"minecraft:writable_book"}]}] run function kcdkp:igui/page/team/action/assign
+execute if score #return kcdk.control matches 3 unless entity @s[nbt={Inventory:[{Count:1b,Slot:24b,id:"minecraft:stone_pickaxe"}]}] run function kcdkp:igui/page/team/action/create
+execute if score #return kcdk.control matches 3 unless entity @s[nbt={Inventory:[{Count:1b,Slot:18b,id:"minecraft:book"}]}] run function kcdkp:igui/page/team/action/change
+execute if score #return kcdk.control matches 3 unless entity @s[nbt={Inventory:[{Count:1b,Slot:27b,id:"minecraft:paper"}]}] run function kcdkp:igui/page/team/action/empty
+execute if score #return kcdk.control matches 3 unless entity @s[nbt={Inventory:[{Count:1b,Slot:26b,id:"minecraft:arrow"}]}] run function kcdkp:igui/page/top/open

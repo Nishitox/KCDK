@@ -1,5 +1,5 @@
 execute unless score yellow kcdkp.sv.beacon matches ..0 run function kcdkp:sv/beacon/score/return/is_beacon
-execute unless score yellow kcdkp.sv.beacon matches ..0 if score return kcdk.control matches 0 run function kcdkp:sv/beacon/score/remove/yellow
+execute unless score yellow kcdkp.sv.beacon matches ..0 if score #return kcdk.control matches 0 run function kcdkp:sv/beacon/score/remove/yellow
 
 execute unless score yellow kcdkp.sv.beacon matches ..0 run function kcdkp:sv/beacon/protect/control
 execute unless score yellow kcdkp.sv.beacon matches ..0 run function kcdkp:sv/beacon/icon/control

@@ -7,7 +7,7 @@ function kcdk:score/return/number_of_enabled_teams
 
 # everyone / チーム数で、１チーム当たりの人数を取得
 scoreboard players operation tmp kcdk.control = everyone kcdk.players
-scoreboard players operation tmp kcdk.control /= return kcdk.control
+scoreboard players operation tmp kcdk.control /= #return kcdk.control
 
 # blue
 execute if data storage kcdk:team {enabled_teams: {blue:   true}} run scoreboard players operation #arg kcdk.control = tmp kcdk.control
