@@ -35,7 +35,7 @@ function kcdkp:dmn/score/return/number_of_captured_flags/by_yellow
 
 #--------------------------------------------------------------------------------------------------
 
-execute if score phase control matches 2 run scoreboard players add timer ticket 1
+execute if score #phase control matches 2 run scoreboard players add timer ticket 1
 execute if score blue control_point matches 2..3 if score red ticket matches 1.. if score timer ticket matches 30 run scoreboard players remove red ticket 1
 execute if score blue control_point matches 3..3 if score red ticket matches 1.. if score timer ticket matches 60 run scoreboard players remove red ticket 1
 execute if score red control_point matches 2..3 if score blue ticket matches 1.. if score timer ticket matches 30 run scoreboard players remove blue ticket 1

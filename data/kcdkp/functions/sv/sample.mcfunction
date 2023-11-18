@@ -19,21 +19,21 @@ function kcdkp:sv/ticket/setup
 
 # ctower:death
 # 以下のコマンドを「death」の一番最初（最下部）に追加してください。必ずbeacon/death_protectが先に実行されるようにしてください
-execute if score phase kcdk.control matches 2 as @a[scores={kcdk.death=1..}] run function kcdkp:sv/beacon/death_protect
-execute if score phase kcdk.control matches 2 as @a[scores={kcdk.death=1..}] run function kcdkp:sv/ticket/score/remove
+execute if score #phase kcdk.control matches 2 as @a[scores={kcdk.death=1..}] run function kcdkp:sv/beacon/death_protect
+execute if score #phase kcdk.control matches 2 as @a[scores={kcdk.death=1..}] run function kcdkp:sv/ticket/score/remove
 
 # ctower:victory conditions
 # 以下のコマンドを「victory conditions」に設定してください。使用しないチームの設定はスキップしてください
-execute if score phase kcdk.control matches 2 if score green kcdkp.sv.ticket matches 0 if score red kcdkp.sv.ticket matches 0 if score yellow kcdkp.sv.ticket matches 0 run scoreboard players set victory kcdk.control 1
-execute if score phase kcdk.control matches 2 if score blue kcdkp.sv.ticket matches 0 if score red kcdkp.sv.ticket matches 0 if score yellow kcdkp.sv.ticket matches 0 run scoreboard players set victory kcdk.control 2
-execute if score phase kcdk.control matches 2 if score blue kcdkp.sv.ticket matches 0 if score green kcdkp.sv.ticket matches 0 if score yellow kcdkp.sv.ticket matches 0 run scoreboard players set victory kcdk.control 3
-execute if score phase kcdk.control matches 2 if score blue kcdkp.sv.ticket matches 0 if score green kcdkp.sv.ticket matches 0 if score red kcdkp.sv.ticket matches 0 run scoreboard players set victory kcdk.control 4
+execute if score #phase kcdk.control matches 2 if score green kcdkp.sv.ticket matches 0 if score red kcdkp.sv.ticket matches 0 if score yellow kcdkp.sv.ticket matches 0 run scoreboard players set victory kcdk.control 1
+execute if score #phase kcdk.control matches 2 if score blue kcdkp.sv.ticket matches 0 if score red kcdkp.sv.ticket matches 0 if score yellow kcdkp.sv.ticket matches 0 run scoreboard players set victory kcdk.control 2
+execute if score #phase kcdk.control matches 2 if score blue kcdkp.sv.ticket matches 0 if score green kcdkp.sv.ticket matches 0 if score yellow kcdkp.sv.ticket matches 0 run scoreboard players set victory kcdk.control 3
+execute if score #phase kcdk.control matches 2 if score blue kcdkp.sv.ticket matches 0 if score green kcdkp.sv.ticket matches 0 if score red kcdkp.sv.ticket matches 0 run scoreboard players set victory kcdk.control 4
 
 # ctower:actionbar
 # 「actionbar」の3番目以上のコマンド(low_info, time, timer)を以下のコマンドに書き換えてください
 execute if score return kcdk.control matches 0 run function kcdkp:sv/ticket/message/actionbar/low_info/control
-execute if score return kcdk.control matches 1 if score phase kcdk.control matches 2 run function kcdkp:sv/ticket/message/actionbar/time/control
-execute if score return kcdk.control matches 2 if score phase kcdk.control matches 2 run function kcdkp:sv/ticket/message/actionbar/timer/control
+execute if score return kcdk.control matches 1 if score #phase kcdk.control matches 2 run function kcdkp:sv/ticket/message/actionbar/time/control
+execute if score return kcdk.control matches 2 if score #phase kcdk.control matches 2 run function kcdkp:sv/ticket/message/actionbar/timer/control
 
 # ctower:set_general_settings
 # 「set_general_settings」の1番目のコマンドを以下のコマンドに書き換えてください
@@ -45,10 +45,10 @@ gamemode survival @a[scores={kcdk.role=0..}]
 
 # ctower:kcdkp.sv.beacon
 # positioned ~ ~ ~ の座標を各ビーコンの位置に設定します。repeat実行されるようにしてください。使用しないチームの設定はスキップしてください
-execute if score phase kcdk.control matches 2 positioned ~ ~ ~ run function kcdkp:sv/beacon/control/blue
-execute if score phase kcdk.control matches 2 positioned ~ ~ ~ run function kcdkp:sv/beacon/control/green
-execute if score phase kcdk.control matches 2 positioned ~ ~ ~ run function kcdkp:sv/beacon/control/red
-execute if score phase kcdk.control matches 2 positioned ~ ~ ~ run function kcdkp:sv/beacon/control/yellow
+execute if score #phase kcdk.control matches 2 positioned ~ ~ ~ run function kcdkp:sv/beacon/control/blue
+execute if score #phase kcdk.control matches 2 positioned ~ ~ ~ run function kcdkp:sv/beacon/control/green
+execute if score #phase kcdk.control matches 2 positioned ~ ~ ~ run function kcdkp:sv/beacon/control/red
+execute if score #phase kcdk.control matches 2 positioned ~ ~ ~ run function kcdkp:sv/beacon/control/yellow
 function kcdkp:sv/beacon/bossbar/store
 
 # ctower:kcdkp.sv.set
@@ -66,8 +66,8 @@ setblock ~ ~ ~ minecraft:beacon
 # なお、ticketが無くなるとプレイヤーはリスポーンができなくなります。なのでプレイヤーの全滅を勝利条件に設定することもできます
 
 # 勝利条件をbeaconとする場合は以下のコマンドを使用してください
-execute if score phase kcdk.control matches 2 if score green kcdkp.sv.beacon matches 0 if score red kcdkp.sv.beacon matches 0 if score yellow kcdkp.sv.beacon matches 0 run scoreboard players set victory kcdk.control 1
-execute if score phase kcdk.control matches 2 if score blue kcdkp.sv.beacon matches 0 if score red kcdkp.sv.beacon matches 0 if score yellow kcdkp.sv.beacon matches 0 run scoreboard players set victory kcdk.control 2
-execute if score phase kcdk.control matches 2 if score blue kcdkp.sv.beacon matches 0 if score green kcdkp.sv.beacon matches 0 if score yellow kcdkp.sv.beacon matches 0 run scoreboard players set victory kcdk.control 3
-execute if score phase kcdk.control matches 2 if score blue kcdkp.sv.beacon matches 0 if score green kcdkp.sv.beacon matches 0 if score red kcdkp.sv.beacon matches 0 run scoreboard players set victory kcdk.control 4
+execute if score #phase kcdk.control matches 2 if score green kcdkp.sv.beacon matches 0 if score red kcdkp.sv.beacon matches 0 if score yellow kcdkp.sv.beacon matches 0 run scoreboard players set victory kcdk.control 1
+execute if score #phase kcdk.control matches 2 if score blue kcdkp.sv.beacon matches 0 if score red kcdkp.sv.beacon matches 0 if score yellow kcdkp.sv.beacon matches 0 run scoreboard players set victory kcdk.control 2
+execute if score #phase kcdk.control matches 2 if score blue kcdkp.sv.beacon matches 0 if score green kcdkp.sv.beacon matches 0 if score yellow kcdkp.sv.beacon matches 0 run scoreboard players set victory kcdk.control 3
+execute if score #phase kcdk.control matches 2 if score blue kcdkp.sv.beacon matches 0 if score green kcdkp.sv.beacon matches 0 if score red kcdkp.sv.beacon matches 0 run scoreboard players set victory kcdk.control 4
 #--------------------------------------------------------------------------------------------------

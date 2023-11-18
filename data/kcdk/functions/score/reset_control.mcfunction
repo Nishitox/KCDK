@@ -1,5 +1,5 @@
 scoreboard players set #arg kcdk.control 0
-scoreboard players set phase kcdk.control 0
+scoreboard players set #phase kcdk.control 0
 scoreboard players set return kcdk.control 0
 scoreboard players set tmp kcdk.control 0
 scoreboard players set time_m kcdk.control 0
