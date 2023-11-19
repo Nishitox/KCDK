@@ -24,17 +24,17 @@ data modify storage kcdk:message common merge value {changed_to_team: {yellow: '
 
 # actionbar: players
 data modify storage kcdk:message actionbar merge value {players: {everyone: '["",{"score":{"name":"everyone","objective":"kcdk.players"}},{"text":"人が参加中"}]'}}
-data modify storage kcdk:message actionbar merge value {players: {blue:     '["",{"text":" 🛡 ","color":"blue"},  {"score":{"name":"blue",  "objective":"kcdk.players"}},{"text":" "}]'}}
-data modify storage kcdk:message actionbar merge value {players: {green:    '["",{"text":" 🛡 ","color":"green"}, {"score":{"name":"green", "objective":"kcdk.players"}},{"text":" "}]'}}
-data modify storage kcdk:message actionbar merge value {players: {red:      '["",{"text":" 🛡 ","color":"red"},   {"score":{"name":"red",   "objective":"kcdk.players"}},{"text":" "}]'}}
-data modify storage kcdk:message actionbar merge value {players: {yellow:   '["",{"text":" 🛡 ","color":"yellow"},{"score":{"name":"yellow","objective":"kcdk.players"}},{"text":" "}]'}}
+data modify storage kcdk:message actionbar merge value {players: {blue:     '["",{"text":" 🛡 ","color":"blue"},  {"score":{"name":"#blue",  "objective":"kcdk.players"}},{"text":" "}]'}}
+data modify storage kcdk:message actionbar merge value {players: {green:    '["",{"text":" 🛡 ","color":"green"}, {"score":{"name":"#green", "objective":"kcdk.players"}},{"text":" "}]'}}
+data modify storage kcdk:message actionbar merge value {players: {red:      '["",{"text":" 🛡 ","color":"red"},   {"score":{"name":"#red",   "objective":"kcdk.players"}},{"text":" "}]'}}
+data modify storage kcdk:message actionbar merge value {players: {yellow:   '["",{"text":" 🛡 ","color":"yellow"},{"score":{"name":"#yellow","objective":"kcdk.players"}},{"text":" "}]'}}
 
 # actionbar: cowntdown/time/timer
-data modify storage kcdk:message actionbar merge value {countdown: {ms: '["",{"score":{"name":"timer_m","objective":"kcdk.control"}},{"text":"分"},{"score":{"name":"timer_s","objective":"kcdk.control"}},{"text":"秒後にゲームを開始します"}]'}}
-data modify storage kcdk:message actionbar merge value {countdown: {m:  '["",{"score":{"name":"timer_m","objective":"kcdk.control"}},{"text":"分後にゲームを開始します"}]'}}
-data modify storage kcdk:message actionbar merge value {countdown: {s:  '["",{"score":{"name":"timer_s","objective":"kcdk.control"}},{"text":"秒後にゲームを開始します"}]'}}
-data modify storage kcdk:message actionbar merge value {time:  '["",{"text":" 🧪 "},{"score":{"name":"time_m", "objective":"kcdk.control"}},{"text":":"},{"score":{"name":"time_s", "objective":"kcdk.control"}}]'}
-data modify storage kcdk:message actionbar merge value {timer: '["",{"text":" 🧪 "},{"score":{"name":"timer_m","objective":"kcdk.control"}},{"text":":"},{"score":{"name":"timer_s","objective":"kcdk.control"}}]'}
+data modify storage kcdk:message actionbar merge value {countdown: {ms: '["",{"score":{"name":"#timer_m","objective":"kcdk.control"}},{"text":"分"},{"score":{"name":"#timer_s","objective":"kcdk.control"}},{"text":"秒後にゲームを開始します"}]'}}
+data modify storage kcdk:message actionbar merge value {countdown: {m:  '["",{"score":{"name":"#timer_m","objective":"kcdk.control"}},{"text":"分後にゲームを開始します"}]'}}
+data modify storage kcdk:message actionbar merge value {countdown: {s:  '["",{"score":{"name":"#timer_s","objective":"kcdk.control"}},{"text":"秒後にゲームを開始します"}]'}}
+data modify storage kcdk:message actionbar merge value {time:  '["",{"text":" 🧪 "},{"score":{"name":"#time_m", "objective":"kcdk.control"}},{"text":":"},{"score":{"name":"#time_s", "objective":"kcdk.control"}}]'}
+data modify storage kcdk:message actionbar merge value {timer: '["",{"text":" 🧪 "},{"score":{"name":"#timer_m","objective":"kcdk.control"}},{"text":":"},{"score":{"name":"#timer_s","objective":"kcdk.control"}}]'}
 
 
 # title: game end
@@ -48,10 +48,10 @@ data modify storage kcdk:message title merge value {defeat:  {red:    '["",{"tex
 data modify storage kcdk:message title merge value {defeat:  {yellow: '["",{"text":"黄色チームの敗北","color":"yellow"}]'}}
 
 # title: number of team players
-data modify storage kcdk:message title merge value {number_of_team_players: {blue:   '["",{"score":{"name":"blue",  "objective":"kcdk.players"},"color":"blue"}]'}}
-data modify storage kcdk:message title merge value {number_of_team_players: {green:  '["",{"score":{"name":"green", "objective":"kcdk.players"},"color":"green"}]'}}
-data modify storage kcdk:message title merge value {number_of_team_players: {red:    '["",{"score":{"name":"red",   "objective":"kcdk.players"},"color":"red"}]'}}
-data modify storage kcdk:message title merge value {number_of_team_players: {yellow: '["",{"score":{"name":"yellow","objective":"kcdk.players"},"color":"yellow"}]'}}
+data modify storage kcdk:message title merge value {number_of_team_players: {blue:   '["",{"score":{"name":"#blue",  "objective":"kcdk.players"},"color":"blue"}]'}}
+data modify storage kcdk:message title merge value {number_of_team_players: {green:  '["",{"score":{"name":"#green", "objective":"kcdk.players"},"color":"green"}]'}}
+data modify storage kcdk:message title merge value {number_of_team_players: {red:    '["",{"score":{"name":"#red",   "objective":"kcdk.players"},"color":"red"}]'}}
+data modify storage kcdk:message title merge value {number_of_team_players: {yellow: '["",{"score":{"name":"#yellow","objective":"kcdk.players"},"color":"yellow"}]'}}
 
 
 # tellraw: label
@@ -60,12 +60,12 @@ data modify storage kcdk:message tellraw merge value {notice:   '["",{"text":"\\
 data modify storage kcdk:message tellraw merge value {error:    '["",{"text":"\\n[kcdk:error] ",   "color":"red"}]'}
 
 # tellraw: announce: time/timer
-data modify storage kcdk:message tellraw merge value {announce: {elapsed_time: {ms:'["",{"text":"経過時間は"},{"score":{"name":"time_m","objective":"kcdk.control"}},{"text":"分"},{"score":{"name":"time_s","objective":"kcdk.control"}},{"text":"秒でした。"}]'}}}
-data modify storage kcdk:message tellraw merge value {announce: {elapsed_time: {m: '["",{"text":"経過時間は"},{"score":{"name":"time_m","objective":"kcdk.control"}},{"text":"分でした。"}]'}}}
-data modify storage kcdk:message tellraw merge value {announce: {elapsed_time: {s: '["",{"text":"経過時間は"},{"score":{"name":"time_s","objective":"kcdk.control"}},{"text":"秒でした。"}]'}}}
-data modify storage kcdk:message tellraw merge value {announce: {time_left:    {ms:'["",{"text":"残り"},{"score":{"name":"timer_m","objective":"kcdk.control"}},{"text":"分"},{"score":{"name":"timer_s","objective":"kcdk.control"}},{"text":"秒でした。"}]'}}}
-data modify storage kcdk:message tellraw merge value {announce: {time_left:    {m: '["",{"text":"残り"},{"score":{"name":"timer_m","objective":"kcdk.control"}},{"text":"分でした。"}]'}}}
-data modify storage kcdk:message tellraw merge value {announce: {time_left:    {s: '["",{"text":"残り"},{"score":{"name":"timer_s","objective":"kcdk.control"}},{"text":"秒でした。"}]'}}}
+data modify storage kcdk:message tellraw merge value {announce: {elapsed_time: {ms:'["",{"text":"経過時間は"},{"score":{"name":"#time_m","objective":"kcdk.control"}},{"text":"分"},{"score":{"name":"#time_s","objective":"kcdk.control"}},{"text":"秒でした。"}]'}}}
+data modify storage kcdk:message tellraw merge value {announce: {elapsed_time: {m: '["",{"text":"経過時間は"},{"score":{"name":"#time_m","objective":"kcdk.control"}},{"text":"分でした。"}]'}}}
+data modify storage kcdk:message tellraw merge value {announce: {elapsed_time: {s: '["",{"text":"経過時間は"},{"score":{"name":"#time_s","objective":"kcdk.control"}},{"text":"秒でした。"}]'}}}
+data modify storage kcdk:message tellraw merge value {announce: {time_left:    {ms:'["",{"text":"残り"},{"score":{"name":"#timer_m","objective":"kcdk.control"}},{"text":"分"},{"score":{"name":"#timer_s","objective":"kcdk.control"}},{"text":"秒でした。"}]'}}}
+data modify storage kcdk:message tellraw merge value {announce: {time_left:    {m: '["",{"text":"残り"},{"score":{"name":"#timer_m","objective":"kcdk.control"}},{"text":"分でした。"}]'}}}
+data modify storage kcdk:message tellraw merge value {announce: {time_left:    {s: '["",{"text":"残り"},{"score":{"name":"#timer_s","objective":"kcdk.control"}},{"text":"秒でした。"}]'}}}
 
 # tellraw: announce: team operations
 data modify storage kcdk:message tellraw merge value {announce: {team_assigned: '["",{"text":"プレイヤーをチームに割り振りました。"}]'}}
