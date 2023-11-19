@@ -23,7 +23,7 @@ data modify storage kcdk:message common merge value {changed_to_team: {yellow: '
 
 
 # actionbar: players
-data modify storage kcdk:message actionbar merge value {players: {everyone: '["",{"score":{"name":"everyone","objective":"kcdk.players"}},{"text":"人が参加中"}]'}}
+data modify storage kcdk:message actionbar merge value {players: {everyone: '["",{"score":{"name":"#everyone","objective":"kcdk.players"}},{"text":"人が参加中"}]'}}
 data modify storage kcdk:message actionbar merge value {players: {blue:     '["",{"text":" 🛡 ","color":"blue"},  {"score":{"name":"#blue",  "objective":"kcdk.players"}},{"text":" "}]'}}
 data modify storage kcdk:message actionbar merge value {players: {green:    '["",{"text":" 🛡 ","color":"green"}, {"score":{"name":"#green", "objective":"kcdk.players"}},{"text":" "}]'}}
 data modify storage kcdk:message actionbar merge value {players: {red:      '["",{"text":" 🛡 ","color":"red"},   {"score":{"name":"#red",   "objective":"kcdk.players"}},{"text":" "}]'}}
