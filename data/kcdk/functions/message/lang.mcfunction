@@ -1,5 +1,8 @@
 # initialize
+data remove storage kcdk:message common
 data remove storage kcdk:message actionbar
+data remove storage kcdk:message title
+data remove storage kcdk:message tellraw
 
 # common
 data modify storage kcdk:message common merge value {game_start :'["",{"text":"試合開始"}]'}
