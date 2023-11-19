@@ -56,7 +56,7 @@ data modify storage kcdk:message title merge value {number_of_team_players: {yel
 
 # tellraw: label
 data modify storage kcdk:message tellraw merge value {label:{announce: '["",{"text":"\\n[kcdk:announce] ","color":"gray"}]'}}
-data modify storage kcdk:message tellraw merge value {label:{notice:   '["",{"text":"\\n[kcdk:notice] ",  "color":"gray"}'}}
+data modify storage kcdk:message tellraw merge value {label:{notice:   '["",{"text":"\\n[kcdk:notice] ",  "color":"gray"}]'}}
 data modify storage kcdk:message tellraw merge value {label:{error:    '["",{"text":"\\n[kcdk:error] ",   "color":"red"}]'}}
 
 # tellraw: announce: time/timer
