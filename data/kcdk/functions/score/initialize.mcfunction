@@ -7,7 +7,7 @@ scoreboard objectives add kcdk.players dummy
 scoreboard objectives add kcdk.role dummy
 scoreboard objectives add health health
 scoreboard objectives setdisplay sidebar.team.aqua kcdk.control
-scoreboard objectives setdisplay belowName health
+scoreboard objectives setdisplay below_name health
 
 # clean objectives
 scoreboard players reset * kcdk.button
